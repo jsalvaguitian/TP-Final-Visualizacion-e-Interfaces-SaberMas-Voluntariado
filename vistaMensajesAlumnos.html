@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MensajesAlumno</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="css/mensajesAlumno.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-body-tertiary bg-violeta nav-underline" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Saber más</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="vistaMensajesAlumnos.html">Mis mensajes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mis donaciones</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid vh-100">
+        <div class="row h-100">
+            <!-- Panel Izquierdo -->
+            <div class="col-md-4 col-lg-3 bg-white border-end d-flex flex-column">
+                <div class="p-3 border-bottom">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button"
+                            data-bs-toggle="dropdown">
+                            Todos mis contactos
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Todos</a></li>
+                            <li><a class="dropdown-item" href="#">Solicitudes rechazadas</a></li>
+                            <li><a class="dropdown-item" href="#">Solicitudes enviadas</a></li>
+                        </ul>
+                    </div>
+                    <input type="text" class="form-control mt-3" placeholder="Buscar contacto...">
+                </div>
+                <!-- Lista de contactos -->
+                <div class="list-group list-group-flush" id="listaContactos">
+                    <button class="list-group-item list-group-item-action d-flex align-items-center gap-2"
+                        onclick="abrirChat()">
+                        <img src="https://randomuser.me/api/portraits/men/72.jpg" alt="Profe" width="40" height="40"
+                            class="rounded-circle">
+                        <span>Prof. de Matemática</span>
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- Panel derecho -->
+            <div class="col-md-8 col-lg-9 d-flex flex-column justify-content-center align-items-center bg-white"
+                id="panelMensaje">
+                <div class="bg-light rounded p-4 text-center w-75">
+                    <h5 class="text-primary violeta">Ningún mensaje</h5>
+                    <p>No olvides seguir las recomendaciones de tu estatus que encontrarás en tu cuenta para obtener más
+                        alumnos/as.</p>
+                </div>
+                <button id="botonPrimario" class="btn btn-primary mt-4">Ver mi estatus</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <script src="script/mensajesAlumno.js"></script>
+
+</body>
+
+</html>
