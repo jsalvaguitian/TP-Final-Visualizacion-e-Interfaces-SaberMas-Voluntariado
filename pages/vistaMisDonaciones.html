@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis donaciones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="../css/mensajesAlumno.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-body-tertiary bg-violeta nav-underline" data-bs-theme="dark">
+        <div class="container-fluid">
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="vistaMiPerfil.html">Mi perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="vistaMensajesAlumnos.html">Mis mensajes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="vistaMisDonaciones.html">Mis donaciones</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <!-- Botón para mostrar formulario -->
+        <button id="botonPrimario" class="btn btn-primary mb-3"
+            onclick="document.getElementById('formDonacion').classList.toggle('d-none')">
+            Nueva donación
+        </button>
+
+        <!-- Formulario para nueva donación -->
+        <div id="formDonacion" class="card p-4 d-none">
+            <form onsubmit="event.preventDefault(); registrarDonacion();">
+                <div class="mb-3">
+                    <label for="destinatario" class="form-label">Destinatario</label>
+                    <select class="form-select" id="destinatario" required>
+                        <option value="">Seleccioná un profe</option>
+                        <option value="Prof. María López (Matemática)">Prof. María López (Matemática)</option>
+                        <option value="Prof. Pablo Díaz (Física)">Prof. Pablo Díaz (Física)</option>
+                        <option value="Fundación Saber Más">Fundación Saber Más</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="monto" class="form-label">Monto</label>
+                    <input type="number" class="form-control" id="monto" required min="1">
+                </div>
+                <div class="mb-3">
+                    <label for="medio" class="form-label">Medio de pago</label>
+                    <select class="form-select" id="medio" required>
+                        <option value="">Seleccioná un medio</option>
+                        <option value="Transferencia">Transferencia</option>
+                        <option value="Mercado Pago">Mercado Pago</option>
+                        <option value="Efectivo">Efectivo</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="detalle" class="form-label">Detalle (opcional)</label>
+                    <textarea class="form-control" id="detalle" rows="2"></textarea>
+                </div>
+                <button id="botonSecundario" type="submit" class="btn btn-success">Confirmar donación</button>
+            </form>
+        </div>
+
+        <!-- Tabla de donaciones -->
+        <div class="table-responsive">
+            <table class="table table-bordered align-middle" id="tablaDonaciones">
+                <thead class="table-light">
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Destinatario</th>
+                        <th>Monto</th>
+                        <th>Medio de pago</th>
+                        <th>Detalle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>03/07/2025</td>
+                        <td>Prof. María López (Matemática)</td>
+                        <td>$1500</td>
+                        <td>Mercado Pago</td>
+                        <td>Colaboración mensual</td>
+                    </tr>
+                    <tr>
+                        <td>15/06/2025</td>
+                        <td>Fundación Saber Más</td>
+                        <td>$1000</td>
+                        <td>Transferencia</td>
+                        <td>Donación puntual</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="script/misDonaciones.js"></script>
+</body>
+
+</html>

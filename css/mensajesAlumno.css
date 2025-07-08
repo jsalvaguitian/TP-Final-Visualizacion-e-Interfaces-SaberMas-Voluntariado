@@ -5,6 +5,10 @@
     --color-texto: #333333;
 }
 
+.navbar-nav {
+    margin-left: 10px;
+}
+
 .mensaje {
     padding: 10px 15px;
     margin-bottom: 10px;
@@ -29,6 +33,11 @@
     flex-direction: column;
 }
 
+.input-custom:focus {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 0.25rem hsla(249, 52%, 57%, 0.402);
+}
+
 .bg-violeta {
     background-color: var(--color-primario) !important;
 }
@@ -45,11 +54,27 @@
     color: var(--color-secundario) !important;
 }
 
-#botonPrimario {
+.btn-primary {
     background-color: var(--color-secundario) !important;
-    border: none;
+    border: none !important;
 }
-#botonSecundario {
+.btn-secondary {
     background-color: var(--color-primario) !important;
-    border: none;
+    border: none !important;
+}
+
+
+
+.icono-chico {
+    width: 120px;
+    height: auto;
+}
+
+.btn-foto {
+    width: 150px;
+  }
+
+.btn-gris{
+    border-color: #333333;
+    color: var(--color-texto);
 }
