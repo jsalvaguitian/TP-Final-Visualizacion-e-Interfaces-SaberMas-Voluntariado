@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil del Profesor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../../css/mensajesProfesor.css" rel="stylesheet" />
+  <style>
+    .presentacion {
+      background: #f0e6ff;
+      border-left: 6px solid #6b59cb;
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+
+    .card-soft {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      border: none;
+      border-radius: 1rem;
+    }
+
+    .solicitud {
+      background-color: #fffbe6;
+      border-left: 6px solid #ff9040;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .tag {
+      background-color: #e9ecef;
+      border-radius: 10px;
+      padding: 0.3rem 0.7rem;
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-sm bg-body-tertiary bg-violeta nav-underline" data-bs-theme="dark">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="vistaMiPerfilProfesor.html">Mi perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="vistaMensajesProfesor.html">Mis mensajes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="vistaMisReunionesProfesor.html">Mis reuniones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="vistaDonacionesProfesor.html">Mis donaciones</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PERFIL -->
+  <div class="container mt-5 mb-4">
+
+    <!-- Solicitudes -->
+    <div class="solicitud">
+      📬 Tenés 2 nuevas solicitudes de clases: <strong>Lucía Gómez</strong> y <strong>Pedro Suárez</strong>.
+      <button class="btn btn-sm btn-primary ms-3">Ver solicitudes</button>
+    </div>
+
+    <div class="card card-soft p-4">
+      <div class="row align-items-center">
+        <!-- FOTO -->
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+          <img src="https://randomuser.me/api/portraits/men/72.jpg" class="rounded-circle shadow-sm mb-2"
+            width="160" alt="Foto profesor" />
+          <h4 class="mb-0">Martín Gómez</h4>
+          <small class="text-muted">33 años · Rosario</small>
+          <div class="mt-2">
+            ⭐⭐⭐⭐☆ <small>(12 valoraciones)</small>
+          </div>
+        </div>
+
+        <!-- DATOS -->
+        <div class="col-md-8">
+          <!-- Presentación -->
+          <div class="presentacion mb-3">
+            🎓 <strong>¡Hola! Soy Martín, estudiante de profesorado en matemática.</strong><br>
+            Me encanta enseñar con buena onda, usando ejemplos simples y adaptados a cada persona.
+          </div>
+
+          <div class="mb-2"><strong>Materia que enseña:</strong> Matemática (nivel secundario)</div>
+          <div class="mb-2"><strong>Carrera:</strong> Profesorado en Matemática</div>
+          <div class="mb-2"><strong>Años de cursada:</strong> 2022 - presente</div>
+          <div class="mb-3"><strong>Modalidad:</strong> Clases virtuales por reunión</div>
+
+          <!-- Tags o chips -->
+          <div class="mb-3">
+            <span class="tag">Paciencia</span>
+            <span class="tag">Secundaria</span>
+            <span class="tag">Explicación paso a paso</span>
+          </div>
+
+          <!-- Botones -->
+          <div class="d-flex gap-2 flex-wrap">
+            <!--<button class="btn btn-outline-primary">✉ Enviar mensaje</button>-->
+            <button class="btn btn-outline-secondary">✏️ Editar perfil</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

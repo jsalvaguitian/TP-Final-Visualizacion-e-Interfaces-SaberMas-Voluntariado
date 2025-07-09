@@ -27,6 +27,7 @@
 }
 
 .chat-box {
+    padding-bottom: 10%;
     height: 400px;
     overflow-y: auto;
     display: flex;

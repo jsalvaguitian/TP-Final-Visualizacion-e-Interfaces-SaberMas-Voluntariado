@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis donaciones recibidas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../../css/mensajesProfesor.css" rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-body-tertiary bg-violeta nav-underline" data-bs-theme="dark">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="vistaMiPerfilProfesor.html">Mi perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="vistaMensajesProfesor.html">Mis mensajes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="vistaMisReunionesProfesor.html">Mis reuniones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="vistaDonacionesProfesor.html">Mis donaciones</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-4">
+
+    <h3 class="mb-4 text-center text-success color-texto">Donaciones recibidas</h3>
+
+    <!-- Total acumulado -->
+    <div class="alert alert-success text-center fw-bold fs-5 violeta color-texto" id="totalDonado">
+      Total recibido: $2500
+    </div>
+
+    <!-- Tabla de donaciones recibidas -->
+    <div class="table-responsive">
+      <table class="table table-bordered align-middle" id="tablaDonaciones">
+        <thead class="table-light">
+          <tr>
+            <th>Fecha</th>
+            <th>Alumno</th>
+            <th>Monto</th>
+            <th>Medio de pago</th>
+            <th>Comentario</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>05/07/2025</td>
+            <td>Lucía Gómez</td>
+            <td>$1000</td>
+            <td>Mercado Pago</td>
+            <td>Gracias por la clase de química</td>
+          </tr>
+          <tr>
+            <td>28/06/2025</td>
+            <td>Marcos Fernández</td>
+            <td>$1500</td>
+            <td>Transferencia</td>
+            <td>Muy claro con las fracciones</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Suma automática del total (puede usarse si se cargan los datos dinámicamente en el futuro)
+    document.addEventListener("DOMContentLoaded", () => {
+      let total = 0;
+      document.querySelectorAll("#tablaDonaciones tbody tr").forEach(row => {
+        const monto = parseInt(row.cells[2].innerText.replace('$', '')) || 0;
+        total += monto;
+      });
+      document.getElementById("totalDonado").innerText = `Total recibido: $${total}`;
+    });
+  </script>
+</body>
+
+</html>
