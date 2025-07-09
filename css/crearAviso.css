@@ -1,0 +1,24 @@
+:root {
+    --color-primario: #6b59cb;
+    --color-secundario: #ff9040;
+    --color-fondo: #f4f4f4;
+    --color-texto: #333333;
+}
+
+.btn-secondary {
+    background-color: var(--color-primario) !important;
+    border: none !important;
+    font-weight: 600 !important;
+}
+
+
+header img {
+  max-height: 50px;
+}
+
+@media (max-width: 768px) {
+  header .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

@@ -14,24 +14,37 @@
 
 <body>
 
-    <!-- ************ despues cambiar esto *********-->
-    <nav class="navbar navbar-expand-sm bg-white border-bottom shadow-sm py-3">
-        <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="../assets/SaberMasVector3.svg" alt="Saber más" height="80" class="me-2">
+   
 
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- Links del menú -->
+    <header class="container py-3">
+    
+        <nav class="navbar navbar-expand-md bg-white border-bottom">
+            <div class="container">
+                <!-- LOGO -->
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/SaberMasVector3.svg" alt="Logo" style="max-height: 50px;">
+                </a>
+    
+                <!-- Botón hamburguesa -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <!-- Contenido colapsable -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a class="btn btn-primary me-2 mb-2 mb-md-0" href="./registrarseEstudiante.html">Quiero aprender</a>
+                        <a class="btn btn-primary" href="./vistaRegistroProfesor.html">Quiero enseñar</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    
+    </header>
 
 
+    
     <main>
 
 
