@@ -89,8 +89,15 @@
 }
 
 .btn-gris {
-    border-color: #333333;
-    color: var(--color-texto);
+    border-color: #6c757d;
+    background-color: #6c757d;
+    color: var(--color-fondo);
+}
+
+.btn-gris:hover {
+     border-color: #6c757d;
+    background-color: #6c757d;
+    color: var(--color-fondo);
 }
 
 .btn-outline-success {

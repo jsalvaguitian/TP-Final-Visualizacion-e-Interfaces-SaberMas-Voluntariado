@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explorar Profesores</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/mensajesAlumno.css">
+  <style>
+    .card-profesor {
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
+    }
+
+    .card-profesor:hover {
+      transform: scale(1.01);
+    }
+
+    .tag {
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.8rem;
+      margin-right: 0.4rem;
+    }
+
+    .star {
+      color: gold;
+    }
+
+    .filtros {
+      background-color: #f9f9ff;
+      padding: 1.5rem;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid mt-4">
+    <div class="row">
+      <!-- Filtros -->
+      <div class="col-md-3">
+        <div class="filtros mb-4">
+          <h5>Filtrar búsqueda</h5>
+          <div class="mb-3">
+            <label class="form-label">¿Qué querés aprender?</label>
+            <input type="text" class="form-control input-custom" placeholder="Ej: Matemática, Inglés..." />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Modalidad</label>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="virtual">
+              <label class="form-check-label" for="virtual">Clases virtuales</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="presencial">
+              <label class="form-check-label" for="presencial">Clases presenciales</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Nivel</label>
+            <select class="form-select input-custom">
+              <option>Primaria</option>
+              <option>Secundaria</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lista de profesores -->
+      <div class="col-md-9">
+        <!-- Card profesor -->
+        <h2 class="mb-4">Clases gratuitas dictadas por estudiantes universitarios</h2>
+        <div class="card card-profesor mb-4 p-3">
+          <div class="row g-0 align-items-center">
+            <div class="col-md-2 text-center">
+              <img src="https://randomuser.me/api/portraits/men/51.jpg" class="rounded-circle" width="80" />
+            </div>
+            <div class="col-md-7">
+              <h5 class="mb-1">Martín Gómez</h5>
+              <div class="mb-1 text-muted">Estudiante de profesorado en matemática · Rosario</div>
+              <div class="mb-1">
+                <span class="star">⭐⭐⭐⭐⭐</span>
+                <small>(12 valoraciones)</small>
+              </div>
+              <p class="mb-1">Clases de Matemática para nivel secundario. Explicaciones claras y con buena onda.</p>
+              <div>
+                <span class="tag">Virtual</span>
+                <span class="tag">Secundaria</span>
+                <span class="tag">Paciencia</span>
+              </div>
+            </div>
+            <div class="col-md-3 text-center">
+              <a href="vistaMiPerfilProfesor.html" class="btn btn-violeta mb-2 w-100">Ver perfil</a>
+              <button class="btn btn-primary w-100">Solicitar clase</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Otro profesor (duplicá este bloque para más resultados) -->
+        <div class="card card-profesor mb-4 p-3">
+          <div class="row g-0 align-items-center">
+            <div class="col-md-2 text-center">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle" width="80" />
+            </div>
+            <div class="col-md-7">
+              <h5 class="mb-1">Lucía Ramírez</h5>
+              <div class="mb-1 text-muted">Estudiante de Letras · Buenos Aires</div>
+              <div class="mb-1">
+                <span class="star">⭐⭐⭐⭐⭐</span>
+                <small>(20 valoraciones)</small>
+              </div>
+              <p class="mb-1">Ayuda con lengua, comprensión lectora y escritura. Clases dinámicas para primaria.</p>
+              <div>
+                <span class="tag">Primaria</span>
+                <span class="tag">Lengua</span>
+                <span class="tag">Virtual</span>
+              </div>
+            </div>
+            <div class="col-md-3 text-center">
+              <a href="#" class="btn btn-violeta mb-2 w-100">Ver perfil</a>
+              <button class="btn btn-primary w-100">Solicitar clase</button>
+            </div>
+          </div>
+        </div>
+        <!-- Pegá este bloque dentro del <div class="col-md-9"> debajo de los anteriores -->
+
+        <!-- Profesor 3 -->
+        <div class="card card-profesor mb-4 p-3">
+          <div class="row g-0 align-items-center">
+            <div class="col-md-2 text-center">
+              <img src="https://randomuser.me/api/portraits/men/22.jpg" class="rounded-circle" width="80" />
+            </div>
+            <div class="col-md-7">
+              <h5 class="mb-1">Tomás Fernández</h5>
+              <div class="mb-1 text-muted">Estudiante de Ingeniería · Córdoba</div>
+              <div class="mb-1">
+                <span class="star">⭐⭐⭐⭐☆</span>
+                <small>(8 valoraciones)</small>
+              </div>
+              <p class="mb-1">Clases de física con ejercicios prácticos y buen humor. Nivel secundario.</p>
+              <div>
+                <span class="tag">Secundaria</span>
+                <span class="tag">Física</span>
+                <span class="tag">Virtual</span>
+              </div>
+            </div>
+            <div class="col-md-3 text-center">
+              <a href="#" class="btn btn-violeta mb-2 w-100">Ver perfil</a>
+              <button class="btn btn-primary w-100">Solicitar clase</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profesor 4 -->
+        <div class="card card-profesor mb-4 p-3">
+          <div class="row g-0 align-items-center">
+            <div class="col-md-2 text-center">
+              <img src="https://randomuser.me/api/portraits/women/12.jpg" class="rounded-circle" width="80" />
+            </div>
+            <div class="col-md-7">
+              <h5 class="mb-1">Camila Torres</h5>
+              <div class="mb-1 text-muted">Estudiante de Psicopedagogía · Mendoza</div>
+              <div class="mb-1">
+                <span class="star">⭐⭐⭐⭐☆</span>
+                <small>(15 valoraciones)</small>
+              </div>
+              <p class="mb-1">Apoyo escolar para primaria con actividades lúdicas y personalizadas.</p>
+              <div>
+                <span class="tag">Primaria</span>
+                <span class="tag">Paciencia</span>
+                <span class="tag">Presencial</span>
+              </div>
+            </div>
+            <div class="col-md-3 text-center">
+              <a href="#" class="btn btn-violeta mb-2 w-100">Ver perfil</a>
+              <button class="btn btn-primary w-100">Solicitar clase</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profesor 5 -->
+        <div class="card card-profesor mb-4 p-3">
+          <div class="row g-0 align-items-center">
+            <div class="col-md-2 text-center">
+              <img src="https://randomuser.me/api/portraits/men/75.jpg" class="rounded-circle" width="80" />
+            </div>
+            <div class="col-md-7">
+              <h5 class="mb-1">Ezequiel Ríos</h5>
+              <div class="mb-1 text-muted">Estudiante de Historia · Salta</div>
+              <div class="mb-1">
+                <span class="star">⭐⭐⭐☆☆</span>
+                <small>(5 valoraciones)</small>
+              </div>
+              <p class="mb-1">Te ayudo a entender historia con ejemplos simples y comparaciones actuales.</p>
+              <div>
+                <span class="tag">Secundaria</span>
+                <span class="tag">Historia</span>
+                <span class="tag">Virtual</span>
+              </div>
+            </div>
+            <div class="col-md-3 text-center">
+              <a href="#" class="btn btn-violeta mb-2 w-100">Ver perfil</a>
+              <button class="btn btn-primary w-100">Solicitar clase</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profesor 6 -->
+        <div class="card card-profesor mb-4 p-3">
+          <div class="row g-0 align-items-center">
+            <div class="col-md-2 text-center">
+              <img src="https://randomuser.me/api/portraits/women/85.jpg" class="rounded-circle" width="80" />
+            </div>
+            <div class="col-md-7">
+              <h5 class="mb-1">Julieta Blanco</h5>
+              <div class="mb-1 text-muted">Estudiante de Medicina · La Plata</div>
+              <div class="mb-1">
+                <span class="star">⭐⭐⭐☆☆</span>
+                <small>(18 valoraciones)</small>
+              </div>
+              <p class="mb-1">Explico biología para secundaria con esquemas y lenguaje claro.</p>
+              <div>
+                <span class="tag">Biología</span>
+                <span class="tag">Secundaria</span>
+                <span class="tag">Virtual</span>
+              </div>
+            </div>
+            <div class="col-md-3 text-center">
+              <a href="#" class="btn btn-violeta mb-2 w-100">Ver perfil</a>
+              <button class="btn btn-primary w-100">Solicitar clase</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profesor 7 -->
+        <div class="card card-profesor mb-4 p-3">
+          <div class="row g-0 align-items-center">
+            <div class="col-md-2 text-center">
+              <img src="https://randomuser.me/api/portraits/men/88.jpg" class="rounded-circle" width="80" />
+            </div>
+            <div class="col-md-7">
+              <h5 class="mb-1">Ignacio Herrera</h5>
+              <div class="mb-1 text-muted">Estudiante de Computación · Mar del Plata</div>
+              <div class="mb-1">
+                <span class="star">⭐⭐⭐☆☆</span>
+                <small>(10 valoraciones)</small>
+              </div>
+              <p class="mb-1">Ayuda con tareas de informática, lógica y herramientas digitales.</p>
+              <div>
+                <span class="tag">Tecnología</span>
+                <span class="tag">Secundaria</span>
+                <span class="tag">Virtual</span>
+              </div>
+            </div>
+            <div class="col-md-3 text-center">
+              <a href="#" class="btn btn-violeta mb-2 w-100">Ver perfil</a>
+              <button class="btn btn-primary w-100">Solicitar clase</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -77,6 +77,17 @@
     border: none !important;
 }
 
+.btn-violeta {
+    border-color: var(--color-primario) !important;
+    color: var(--color-primario) !important;
+}
+
+.btn-violeta:hover {
+background-color: var(--color-primario) !important;
+color: var(--color-fondo) !important;
+    border: none !important;
+}
+
 
 .icono-chico {
     width: 120px;
@@ -87,9 +98,17 @@
     width: 150px;
 }
 
+
 .btn-gris {
-    border-color: #333333;
-    color: var(--color-texto);
+    border-color: #6c757d;
+    background-color: #6c757d;
+    color: var(--color-fondo);
+}
+
+.btn-gris:hover {
+     border-color: #6c757d;
+    background-color: #6c757d;
+    color: var(--color-fondo);
 }
 
 .btn-outline-success {

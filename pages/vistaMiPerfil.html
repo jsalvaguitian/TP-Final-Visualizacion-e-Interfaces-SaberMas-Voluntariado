@@ -24,6 +24,9 @@
                         <a class="nav-link" aria-current="page" href="vistaMensajesAlumnos.html">Mis mensajes</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="vistaMisReuniones.html">Mis reuniones</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="vistaMisDonaciones.html">Mis donaciones</a>
                     </li>
                 </ul>
@@ -40,14 +43,14 @@
                         class="img-thumbnail mb-2" width="150" id="previewFoto">
 
                     <!-- Cambiar foto -->
-                    <label class="btn btn-outline-primary btn-sm mt-2 btn-foto d-block mx-auto text-center btn-gris">
+                    <label class="btn btn-outline-secondary btn-sm mt-2 btn-foto d-block mx-auto text-center btn-gris">
                         Cambiar foto
                         <input type="file" name="fotoPerfil" accept="image/*" class="d-none"
                             onchange="mostrarPreview(this)">
                     </label>
 
                     <!-- Eliminar foto -->
-                    <button type="button" class="btn btn-outline-danger btn-sm mt-2 btn-foto d-block mx-auto btn-gris"
+                    <button type="button" class="btn btn-danger btn-sm mt-2 btn-foto d-block mx-auto"
                         onclick="eliminarFoto()">Eliminar foto</button>
                 </div>
 

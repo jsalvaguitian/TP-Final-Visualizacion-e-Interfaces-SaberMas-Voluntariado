@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis reuniones</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../css/mensajesAlumno.css" rel="stylesheet" />
+  <style>
+    .estado {
+      padding: 0.3rem 0.7rem;
+      border-radius: 0.5rem;
+      font-size: 0.85rem;
+    }
+
+    .estado-activa {
+      background-color: #d1e7dd;
+      color: #0f5132;
+    }
+
+    .estado-finalizada {
+      background-color: #f8d7da;
+      color: #842029;
+    }
+
+    .estado-pendiente {
+      background-color: #fff3cd;
+      color: #664d03;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-sm bg-body-tertiary bg-violeta nav-underline" data-bs-theme="dark">
+        <div class="container-fluid">
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="vistaMiPerfil.html">Mi perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="vistaMensajesAlumnos.html">Mis mensajes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="vistaMisReuniones.html">Mis reuniones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vistaMisDonaciones.html">Mis donaciones</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <div class="container mt-4">
+    <h3 class="mb-4 text-center">Mis reuniones</h3>
+
+    <div class="table-responsive">
+      <table class="table table-hover align-middle">
+        <thead class="table-light">
+          <tr>
+            <th>Profesor</th>
+            <th>Materia</th>
+            <th>Fecha</th>
+            <th>Duración</th>
+            <th>Estado</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Valentina Ríos</td>
+            <td>Matemática</td>
+            <td>08/07/2025 18:00</td>
+            <td>45 min</td>
+            <td><span class="estado estado-pendiente">Pendiente</span></td>
+            <td><button class="btn btn-gris btn-sm" disabled>Esperando</button></td>
+          </tr>
+          <tr>
+            <td>Lucas Fernández</td>
+            <td>Física</td>
+            <td>07/07/2025 17:30</td>
+            <td>30 min</td>
+            <td><span class="estado estado-finalizada">Finalizada</span></td>
+            <td><button class="btn btn-gris btn-sm">Ver resumen</button></td>
+          </tr>
+          <tr>
+            <td>Carla Pérez</td>
+            <td>Química</td>
+            <td>08/07/2025 20:00</td>
+            <td>60 min</td>
+            <td><span class="estado estado-activa">En curso</span></td>
+            <td><button class="btn btn-primary btn-sm" onclick="window.location.href='vistaSalaReunion.html'">Unirse</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
