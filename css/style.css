@@ -154,9 +154,8 @@
 
 .container-3eraparte {
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     background-color: var(--color-primario);
-
 }
 
 .container-4eraparte {
@@ -169,6 +168,10 @@
 .footer {
     background-color: var(--color-texto);
     height: 100px;
+}
+
+.card {
+    border: none !important;
 }
 
 .testimonial-card {
