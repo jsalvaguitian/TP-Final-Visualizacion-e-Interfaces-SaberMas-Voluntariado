@@ -10,45 +10,18 @@
     padding: 0;
 }
 
-.logo img {
-    width: 15em;
+.a-cat{
+    text-decoration: none;
+     color: inherit;
 }
 
-.logo {
-    width: 15em;
+.a-cat:visited {
+  color: inherit;
 }
 
-.btn-primary {
-    background-color: var(--color-secundario) !important;
-    border: none !important;
-    font-weight: 600 !important;
+.a-cat:hover {
+  color: inherit;
 }
-
-.btn-outline-primary {
-  color: var(--color-secundario) !important;
-  border-color: var(--color-secundario) !important;
-  font-weight: 600  !important;
-}
-
-.btn-outline-primary:hover {
-  background-color: var(--color-secundario) !important;
-  color: #fff !important;
-}
-.container-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 2rem;
-    position: relative;
-    z-index: 5;
-}
-
-.btn-header {
-    margin-left: 1rem;
-    z-index: 10;
-
-}
-
 
 .container-1eraparte {
     width: 100%;
@@ -91,7 +64,7 @@
 
 #categoriaTrack {
     scrollbar-width: none;
-    width:90%;
+    width: 90%;
 }
 
 #categoriaTrack::-webkit-scrollbar {
@@ -121,78 +94,191 @@
 .subtitulo {
     color: #333;
     font-size: 1.1rem;
-    font-weight:700;
+    font-weight: 700;
 }
 
-.principal{
+.principal {
     padding-top: 4rem;
 }
 
-.categoria-nombre{
+.categoria-nombre {
     font-size: 0.7rem;
 }
+
 /****************************/
-.container-2daparte{
+.container-2daparte {
     width: 100%;
     height: 100vh;
     background-color: #ffe3cf;
 
 }
 
-.container-pasos{
+.container-pasos {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     margin-top: 2.5rem;
-    gap:1rem;
+    gap: 1rem;
     margin: 2rem 1rem 0 3rem;
-    
+
 
 }
 
-.cuadro-img img{
+.cuadro-img img {
     height: 10rem;
 }
 
-.cuadro{
-    display:flex;
+.cuadro {
+    display: flex;
     gap: 1rem;
 
 }
 
-.titulo2{
+.titulo1 {
     text-align: center;
     padding-top: 2rem;
-    
+
 }
 
-.btn-empezar{
+.titulo2 {
+    text-align: center;
+    padding-top: 2rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+
+}
+
+.btn-empezar {
     margin-top: 3rem;
 }
 
-.container-3eraparte{
+.container-3eraparte {
     width: 100%;
     height: 100vh;
     background-color: var(--color-primario);
 
 }
-.container-4eraparte{
+
+.container-4eraparte {
     width: 100%;
     height: 100vh;
     background-color: var(--color-secundario);
 
 }
 
-.footer{
+.footer {
     background-color: var(--color-texto);
     height: 100px;
 }
 
 .testimonial-card {
-  transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .testimonial-card:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.09);
-  transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.09);
+    transform: translateY(-4px);
 }
+
+.footer-column {
+    text-align: center;
+}
+
+.titulo3 {
+    text-align: center;
+    padding-top: 2rem;
+    color: white;
+
+}
+
+.text {
+    color: var(--color-primario) !important;
+}
+
+.text:hover {
+    font-weight: 600;
+}
+
+.card-img-top {
+    height: 17rem;
+}
+
+/********************************************
+
+.logo img {
+    width: 15em;
+}
+
+.logo {
+    width: 15em;
+}
+
+.btn-primary {
+    background-color: var(--color-secundario) !important;
+    border: none !important;
+    font-weight: 600 !important;
+}
+
+.btn-outline-primary {
+    color: var(--color-secundario) !important;
+    border-color: var(--color-secundario) !important;
+    font-weight: 600 !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--color-secundario) !important;
+    color: #fff !important;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+.btn-header {
+    margin-left: 1rem;
+    z-index: 10;
+
+}
+
+*/
+/******************************************************************/
+/*menu hamburguesa
+.avatar-button {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.dropdown-menu {
+    width: 250px;
+}
+
+.dropdown-header {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.text-logout{
+    color: var(--color-secundario) !important;
+    font-weight: 600 !important;
+}
+
+.js-profe-menu{
+    display: none;
+}
+
+.js-alumno-menu{
+    display: none;
+}
+
+.js-botones{
+    display: block;
+}
+*/
