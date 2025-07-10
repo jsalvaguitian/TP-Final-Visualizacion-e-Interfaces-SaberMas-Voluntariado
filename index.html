@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header-footer.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
@@ -15,7 +16,7 @@
 </head>
 
 <body>
-    <div class="container-1eraparte">
+    <section class="container-1eraparte">
         <div class="triangulo-der-sup"></div>
         <div class="triangulo-izq-inf"></div>
 
@@ -23,12 +24,76 @@
             <div class="logo">
                 <img src="./assets/SaberMasVector3.svg" alt="" srcset="">
             </div>
-            <div class="container-btn">
-                <a class="btn btn-primary" href="./pages/registrarseEstudiante.html">Quiero aprender</a>
-                <a class="btn btn-primary btn-reg-prof" href="./pages/vistaRegistroProfesor.html">Quiero enseñar</a>
+
+            <div class="container-btn js-botones">
+                <a class="btn btn-outline-primary btn-login-n" href="./pages/login.html">Iniciar sesion</a>
+                <a class="btn btn-primary btn-header" href="./pages/registrarseEstudiante.html">Quiero aprender</a>
+                <a class="btn btn-primary btn-header" href="./pages/registroProfesor.html">Quiero enseñar</a>
+            </div>
+            <!--#######################################################################-->
+            <div class="container-btn js-alumno-menu">
+
+                <div class="dropdown text-end">
+                    <button class="btn btn-primary avatar-button" type="button" id="menuUsuario"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <span>¡Hola Juan!</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="menuUsuario">
+                        <li>
+                            <h6 class="dropdown-header"><span class="user-mail">juan@email.com </span></h6>
+                        </li>
+                        <li><a class="dropdown-item" href="./pages/vistaMensajesAlumnos.html"><i
+                                    class="bi bi-chat-dots"></i> Mis mensajes</a>
+                        </li>
+                        <li><a class="dropdown-item" href="./pages/vistaMisReuniones.html"><i
+                                    class="bi bi-calendar-event"></i> Mis reuniones</a></li>
+                        <li><a class="dropdown-item" href="./pages/vistaMisDonaciones.html"><i
+                                    class="bi bi-cash-coin"></i> Mis donaciones</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="./pages/vistaMiPerfil.html"><i
+                                    class="bi bi-person-circle"></i> Mi perfil</a></li>
+                        <li><a class="dropdown-item text-logout js-btn-login-al" href="#"><i
+                                    class="bi bi-box-arrow-right"></i> Cerrar
+                                sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--#########################################-->
+            <div class="container-btn js-profe-menu">
+
+                <div class="dropdown text-end">
+                    <button class="btn btn-primary avatar-button" type="button" id="menuUsuario"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <span>¡Hola Martin!</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="menuUsuario">
+                        <li>
+                            <h6 class="dropdown-header"><span class="user-mail">martin@email.com </span></h6>
+                        </li>
+                        <li><a class="dropdown-item" href="./pages/pagesProfesor/vistaMensajesProfesor.html"><i
+                                    class="bi bi-chat-dots"></i> Mis mensajes</a>
+                        </li>
+                        <li><a class="dropdown-item" href="./pages/pagesProfesor/vistaMisReunionesProfesor.html"><i
+                                    class="bi bi-calendar-event"></i> Mis reuniones</a></li>
+                        <li><a class="dropdown-item" href="./pages/pagesProfesor/vistaDonacionesProfesor.html"><i
+                                    class="bi bi-cash-coin"></i> Mis donaciones</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="./pages/pagesProfesor/vistaMiPerfilProfesor.html"><i
+                                    class="bi bi-person-circle"></i> Mi perfil</a></li>
+                        <li><a class="dropdown-item text-logout js-btn-login-prof" href="#"><i
+                                    class="bi bi-box-arrow-right"></i> Cerrar
+                                sesión</a></li>
+                    </ul>
+                </div>
+                <!---#########################################-->
             </div>
         </header>
-        <section class="principal">
+        <article class="principal">
             <h1 class="titulo">SABER MÁS</h1>
             <p class="subtitulo">La comunidad donde se aprende enseñando y se enseña aprendiendo.</p>
             <form class="d-flex mt-3 justify-content-center mx-auto" style="max-width: 500px; width: 100%;">
@@ -45,106 +110,181 @@
                 </button>
 
                 <div class="overflow-auto d-flex align-items-center gap-3 px-3 " id="categoriaTrack">
-                    <div class="categoria text-center py-0 mt-0 mb-0">
-                        <i class="bi bi-calculator fs-3"></i>
-                        <p class="categoria-nombre mb-0">Matemática</p>
-                    </div>
-                    <div class="categoria text-center py-0 mt-0 mb-0">
-                        <i class="bi bi-book fs-3"></i>
-                        <p class="categoria-nombre mb-0">Lengua</p>
-                    </div>
-                    <div class="categoria text-center py-0 mt-0 mb-0">
-                        <i class="bi bi-journal-bookmark fs-3"></i>
-                        <p class="categoria-nombre mb-0">Historia</p>
-                    </div>
-                    <div class="categoria text-center py-0 mt-0 mb-0">
-                        <i class="bi bi-globe-americas fs-3"></i>
-                        <p class="categoria-nombre mb-0">Geografia</p>
-                    </div>
-                    <div class="categoria text-center py-0 mt-0 mb-0">
-                        <i class="bi bi-translate fs-3"></i>
-                        <p class="categoria-nombre mb-0">Inglés</p>
-                    </div>
-                    <div class="categoria text-center py-0 mt-0 mb-0">
-                        <span class="material-symbols-outlined fs-2 mt-1">
-                            biotech
-                        </span>
-                        <p class="categoria-nombre mb-0">Biología</p>
-                    </div>
-                    <div class="categoria text-center py-0 mt-0 mb-0">
-                        <i class="bi bi-bar-chart-line fs-3"></i>
-                        <p class="categoria-nombre mb-0">Estadística</p>
-                    </div>
-                    <div class="categoria text-center py-0 mt-0 mb-0">
-                        <i class="bi bi-music-note-beamed fs-3"></i>
-                        <p class="categoria-nombre mb-0">Música</p>
-                    </div>
-                    <div class="categoria text-center py-0 mt-0 mb-0">
-                        <span class="material-symbols-outlined fs-2">
-                            language_french
-                        </span>
-                        <p class="categoria-nombre mb-0">Francés</p>
-                    </div>
-                    <div class="categoria text-center py-0 mt-0 mb-0">
-                        <span class="material-symbols-outlined fs-2">
-                            psychology
-                        </span>
-                        <p class="categoria-nombre mb-0">Psicología aplicada</p>
-                    </div>
-                    <div class="categoria text-center py-0 mt-0 mb-0">
-                        <i class="bi bi-camera fs-3"></i>
-                        <p class="categoria-nombre mb-0">Fotografia</p>
-                    </div>
-                    <div class="categoria text-center py-0 mt-0 mb-0">
-                        <span class="material-symbols-outlined fs-2">
-                            functions
-                        </span>
-                        <p class="categoria-nombre mb-0">Análisis Matemático</p>
-                    </div>
-                    <div class="categoria text-center py-0 mt-0 mb-0">
-                        <i class="bi bi-rulers fs-3"></i>
-                        <p class="categoria-nombre mb-0">Dibujo Técnico</p>
-                    </div>
-                    <div class="categoria text-center py-0 mt-0 mb-0">
-                        <i class="bi bi bi-chat-right-quote fs-3"></i>
-                        <p class="categoria-nombre mb-0">Portugués</p>
-                    </div>
-                    <div class="categoria text-center py-0 mt-0 mb-0">
-                        <i class="bi bi-motherboard  fs-3"></i>
-                        <p class="categoria-nombre mb-0">Electrónica general</p>
-                    </div>
-                    <div class="categoria text-center py-0 mt-0 mb-0">
-                        <i class="bi bi-laptop fs-3"></i>
-                        <p class="categoria-nombre mb-0">Computación</p>
-                    </div>
-                    <div class="categoria text-center py-0 mt-0 mb-0">
-                        <i class="bi bi-palette fs-3"></i>
-                        <p class="categoria-nombre mb-0">Práctica de diseño</p>
-                    </div>
-                    <div class="categoria text-center py-0 mt-0 mb-0">
-                        <span class="material-symbols-outlined fs-2">
-                            balance
-                        </span>
-                        <p class="categoria-nombre mb-0">Educación ciudadana</p>
-                    </div>
-                    <div class="categoria text-center py-0 mt-0 mb-0">
-                        <i class="bi bi-terminal fs-3"></i>
-                        <p class="categoria-nombre mb-0">Programación</p>
-                    </div>
+                    <a  class="a-cat" href="./pages/vistaAvisosProfes.html">
+                        <div class="categoria text-center py-0 mt-0 mb-0">
+                            <i class="bi bi-calculator fs-3"></i>
+                            <p class="categoria-nombre mb-0">Matemática</p>
+                        </div>
+                    </a>
+
+                    <a class="a-cat" href="./pages/vistaAvisosProfes.html">
+                        <div class="categoria text-center py-0 mt-0 mb-0">
+                            <i class="bi bi-book fs-3"></i>
+                            <p class="categoria-nombre mb-0">Lengua</p>
+                        </div>
+                    </a>
+
+
+                    <a class="a-cat" href="./pages/vistaAvisosProfes.html">
+                        <div class="categoria text-center py-0 mt-0 mb-0">
+                            <i class="bi bi-journal-bookmark fs-3"></i>
+                            <p class="categoria-nombre mb-0">Historia</p>
+                        </div>
+
+                    </a>
+
+                    <a class="a-cat" href="./pages/vistaAvisosProfes.html">
+                        <div class="categoria text-center py-0 mt-0 mb-0">
+                            <i class="bi bi-globe-americas fs-3"></i>
+                            <p class="categoria-nombre mb-0">Geografia</p>
+                        </div>
+                    </a>
+
+
+                    <a class="a-cat" href="./pages/vistaAvisosProfes.html">
+                        <div class="categoria text-center py-0 mt-0 mb-0">
+                            <i class="bi bi-translate fs-3"></i>
+                            <p class="categoria-nombre mb-0">Inglés</p>
+                        </div>
+                    </a>
+
+
+                    <a class="a-cat" href="./pages/vistaAvisosProfes.html">
+                        <div class="categoria text-center py-0 mt-0 mb-0">
+                            <span class="material-symbols-outlined fs-2 mt-1">
+                                biotech
+                            </span>
+                            <p class="categoria-nombre mb-0">Biología</p>
+                        </div>
+                    </a>
+
+
+                    <a class="a-cat" href="./pages/vistaAvisosProfes.html">
+                        <div class="categoria text-center py-0 mt-0 mb-0">
+                            <i class="bi bi-bar-chart-line fs-3"></i>
+                            <p class="categoria-nombre mb-0">Estadística</p>
+                        </div>
+                    </a>
+
+
+                    <a class="a-cat" href="./pages/vistaAvisosProfes.html">
+                        <div class="categoria text-center py-0 mt-0 mb-0">
+                            <i class="bi bi-music-note-beamed fs-3"></i>
+                            <p class="categoria-nombre mb-0">Música</p>
+                        </div>
+                    </a>
+
+
+                    <a class="a-cat" href="./pages/vistaAvisosProfes.html">
+                        <div class="categoria text-center py-0 mt-0 mb-0">
+                            <span class="material-symbols-outlined fs-2">
+                                language_french
+                            </span>
+                            <p class="categoria-nombre mb-0">Francés</p>
+                        </div>
+                    </a>
+
+
+                    <a class="a-cat" href="./pages/vistaAvisosProfes.html">
+                        <div class="categoria text-center py-0 mt-0 mb-0">
+                            <span class="material-symbols-outlined fs-2">
+                                psychology
+                            </span>
+                            <p class="categoria-nombre mb-0">Psicología aplicada</p>
+                        </div>
+                    </a>
+
+
+                    <a class="a-cat" href="./pages/vistaAvisosProfes.html">
+                        <div class="categoria text-center py-0 mt-0 mb-0">
+                            <i class="bi bi-camera fs-3"></i>
+                            <p class="categoria-nombre mb-0">Fotografia</p>
+                        </div>
+                    </a>
+
+
+                    <a class="a-cat" href="./pages/vistaAvisosProfes.html">
+                        <div class="categoria text-center py-0 mt-0 mb-0">
+                            <span class="material-symbols-outlined fs-2">
+                                functions
+                            </span>
+                            <p class="categoria-nombre mb-0">Análisis Matemático</p>
+                        </div>
+                    </a>
+
+
+                    <a class="a-cat" href="./pages/vistaAvisosProfes.html">
+                        <div class="categoria text-center py-0 mt-0 mb-0">
+                            <i class="bi bi-rulers fs-3"></i>
+                            <p class="categoria-nombre mb-0">Dibujo Técnico</p>
+                        </div>
+                    </a>
+
+
+                    <a class="a-cat" href="./pages/vistaAvisosProfes.html">
+                        <div class="categoria text-center py-0 mt-0 mb-0">
+                            <i class="bi bi bi-chat-right-quote fs-3"></i>
+                            <p class="categoria-nombre mb-0">Portugués</p>
+                        </div>
+                    </a>
+
+
+                    <a class="a-cat" href="./pages/vistaAvisosProfes.html">
+                        <div class="categoria text-center py-0 mt-0 mb-0">
+                            <i class="bi bi-motherboard  fs-3"></i>
+                            <p class="categoria-nombre mb-0">Electrónica general</p>
+                        </div>
+                    </a>
+
+
+                    <a class="a-cat" href="./pages/vistaAvisosProfes.html">
+                        <div class="categoria text-center py-0 mt-0 mb-0">
+                            <i class="bi bi-laptop fs-3"></i>
+                            <p class="categoria-nombre mb-0">Computación</p>
+                        </div>
+                    </a>
+
+
+                    <a class="a-cat" href="./pages/vistaAvisosProfes.html">
+                        <div class="categoria text-center py-0 mt-0 mb-0">
+                            <i class="bi bi-palette fs-3"></i>
+                            <p class="categoria-nombre mb-0">Práctica de diseño</p>
+                        </div>
+                    </a>
+
+
+                    <a class="a-cat" href="./pages/vistaAvisosProfes.html">
+                        <div class="categoria text-center py-0 mt-0 mb-0">
+                            <span class="material-symbols-outlined fs-2">
+                                balance
+                            </span>
+                            <p class="categoria-nombre mb-0">Educación ciudadana</p>
+                        </div>
+                    </a>
+
+
+                    <a class="a-cat" href="./pages/vistaAvisosProfes.html">
+                        <div class="categoria text-center py-0 mt-0 mb-0">
+                            <i class="bi bi-terminal fs-3"></i>
+                            <p class="categoria-nombre mb-0">Programación</p>
+                        </div>
+
+                    </a>
+
                 </div>
                 <button class="btn btn-light position-absolute end-0 top-50 translate-middle-y  rounded-circle me-2"
                     id="rightBtn">
                     <i class="bi bi-chevron-right"></i>
                 </button>
-        </section>
+        </article>
 
-    </div>
-    <div class="container-2daparte">
-        <h1 class="titulo2">Aprendé en 4 pasos simples.</h1>
+    </section>
+    <section class="container-2daparte">
+        <h2 class="titulo1">Aprendé en 4 pasos simples.</h2>
         <div class="container-pasos">
             <div class="cuadro">
                 <div class="cuadro-img">
-                    <img src="./assets/searching.png" alt="" >
+                    <img src="./assets/searching.png" alt="">
                 </div>
                 <div class="cuadro-text">
                     <h4>1. Elegí la materia que necesitás reforzar</h4>
@@ -154,7 +294,7 @@
             </div>
             <div class="cuadro">
                 <div class="cuadro-img">
-                    <img src="./assets/school.png" alt="" >
+                    <img src="./assets/school.png" alt="">
                 </div>
                 <div class="cuadro-text">
                     <h4>2.Encontrá a tu profe ideal.</h4>
@@ -164,7 +304,7 @@
             </div>
             <div class="cuadro">
                 <div class="cuadro-img">
-                    <img src="./assets/schedule.png" alt="" >
+                    <img src="./assets/schedule.png" alt="">
                 </div>
                 <div class="cuadro-text">
                     <h4>3.Agendá el día y horario que más te convenga.</h4>
@@ -183,19 +323,230 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container-3eraparte">
-        
-    </div>
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <button class="btn btn-primary btn-empezar"
+                onclick="window.location.href='./pages/vistaAvisosProfes.html'">Quiero empezar</button>
+        </div>
+    </section>
+    <section class="container-3eraparte">
+        <h2 class="titulo2"> Profesores recomendados</h2>
 
-    
-    <footer>
+        <div id="profesoresCarrusel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
 
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row justify-content-center px-3">
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <img src="./assets/profe2.jpg" class="card-img-top" alt="Ana Gonzalez">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Ana Gonzalez</h5>
+                                    <p class="card-text">Estudiante de profesorado con experiencia en clases de apoyo
+                                        para niños y adolescentes.</p>
+                                    <a href="#" class="btn btn-primary">Ver perfil</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <img src="./assets/profe1.jpg" class="card-img-top" alt="Juan Perez">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Juan Perez</h5>
+                                    <p class="card-text">Profesor de informática. Especialista en programación para
+                                        jóvenes.</p>
+                                    <a href="#" class="btn btn-primary">Ver perfil</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <img src="./assets/profe-fem-3.jpg" class="card-img-top" alt="Laura Gómez">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Laura Gómez</h5>
+                                    <p class="card-text">Apasionada por la historia y ciencias sociales. Clases claras y
+                                        dinámicas.</p>
+                                    <a href="#" class="btn btn-primary">Ver perfil</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <img src="./assets/profe-mas-4.jpg" class="card-img-top" alt="Pablo Ruiz">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Pablo Ruiz</h5>
+                                    <p class="card-text">Clases de Biología orientadas a estudiantes de secundaria y
+                                        CBC.</p>
+                                    <a href="#" class="btn btn-primary">Ver perfil</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center px-3">
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <img src="./assets/profe-fem-5.jpg" class="card-img-top" alt="Sofia Martinez">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Sofía Martínez</h5>
+                                    <p class="card-text">Estudiante avanzada en Letras. Apoyo escolar en comprensión
+                                        lectora y redacción.</p>
+                                    <a href="#" class="btn btn-primary">Ver perfil</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100">
+                                <img src="./assets/profe-mas-6.jpg" class="card-img-top" alt="Martín López">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Martín López</h5>
+                                    <p class="card-text">Profesor de Educación Física. Clases con enfoque lúdico y
+                                        saludable.</p>
+                                    <a href="#" class="btn btn-primary">Ver perfil</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Podés seguir agregando más profes aquí -->
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#profesoresCarrusel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#profesoresCarrusel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+    <section class="container-4eraparte">
+
+        <div class="container">
+            <div class="row g-4">
+                <h2 class="titulo3">Qué opinan nuestros alumnos</h2>
+                <!-- Testimonio 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="testimonial-card p-4 h-100 bg-white rounded border ">
+                        <p class="mb-3">“Gracias a estas clases pude entender Matemática y aprobar el trimestre. El
+                            profe explica súper claro.”</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Alumno"
+                                class="rounded-circle me-2" width="40">
+                            <div>
+                                <strong>Luz Gómez</strong><br>
+                                5º año · Escuela Técnica Nº4
+                            </div>
+                        </div>
+                        <a href="./pages/vistaAvisosProfes.html" class="d-block mt-3 small text text-decoration-none">Ver tutorias de Matemática</a>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="testimonial-card p-4 h-100 bg-white rounded border">
+                        <p class="mb-3">“Yo no entendía nada de Historia, pero con los videos y ejercicios pude
+                            prepararme para rendir bien.”</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Alumno"
+                                class="rounded-circle me-2" width="40">
+                            <div>
+                                <strong>Franco Salinas</strong><br>
+                                4º año · E.E.S Nº2 Belgrano
+                            </div>
+                        </div>
+                        <a href="./pages/vistaAvisosProfes.html" class="d-block mt-3 small text text-decoration-none">Ver tutorias de Historia</a>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="testimonial-card p-4 h-100 bg-white rounded border">
+                        <p class="mb-3">“La plataforma me ayudó mucho con Lengua. Antes me costaba escribir textos,
+                            ahora me siento más segura.”</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/women/50.jpg" alt="Alumno"
+                                class="rounded-circle me-2" width="40">
+                            <div>
+                                <strong>Camila Torres</strong><br>
+                                3º año · Escuela Secundaria San Martín
+                            </div>
+                        </div>
+                        <a href="./pages/vistaAvisosProfes.html" class="d-block mt-3 small text text-decoration-none">Ver tutorias de Lengua</a>
+                    </div>
+                </div>
+
+                <!-- Testimonio 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="testimonial-card p-4 h-100 bg-white rounded border">
+                        <p class="mb-3">“Con estas clases entendí cómo resolver problemas de Física. Ahora ya no
+                            tengo miedo a los exámenes.”</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/men/60.jpg" alt="Alumno"
+                                class="rounded-circle me-2" width="40">
+                            <div>
+                                <strong>Tomás Vera</strong><br>
+                                5º año · E.E.S Nº12 'Jorge Luis Borges'
+                            </div>
+                        </div>
+                        <a href="./pages/vistaAvisosProfes.html" class="d-block mt-3 small text text-decoration-none">Ver tutorias de Física</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <footer class="bg-dark text-light pt-4 pb-3">
+        <div class="container">
+            <div class="row">
+
+                <!-- Sobre nosotros -->
+                <div class="col-md-4 mb-3">
+                    <h5>Sobre nosotros</h5>
+                    <p class="small">Somos una plataforma educativa que ayuda a estudiantes de secundaria a mejorar su
+                        rendimiento con clases claras, prácticas y accesibles.</p>
+                </div>
+
+                <!-- Enlaces útiles -->
+                <div class="col-md-4 mb-3 footer-column">
+                    <h5>Enlaces útiles</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="./index.html" class="text-decoration-none text-light">Inicio</a></li>
+                        <li><a href="./pages/vistaAvisosProfes.html" class="text-decoration-none text-light">Tutorias</a></li>
+                    </ul>
+                </div>
+
+                <!-- Redes sociales -->
+                <div class="col-md-4 mb-3 footer-column">
+                    <h5>Seguinos</h5>
+                    <a href="#" class="text-light"><i class="bi bi-facebook"></i> Facebook</a><br>
+                    <a href="#" class="text-light"><i class="bi bi-instagram"></i> Instagram</a><br>
+                    <a href="#" class="text-light"><i class="bi bi-youtube"></i> YouTube</a>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-4 small text-muted">
+                <p class="text-light">© 2025 Plataforma Educativa · Todos los derechos reservados</p>
+
+            </div>
+        </div>
     </footer>
+    <script src="https://kit.fontawesome.com/d3605530f4.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
     <script src="./script/home.js"></script>
+    <script src="./script/cerrar-sesion.js"></script>
 </body>
 
 </html>

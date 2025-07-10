@@ -1,0 +1,86 @@
+
+/********************************************/
+.a-logo{
+    text-decoration: none;
+    color: inherit;
+}
+
+.a-logo:hover, .a-logo:visited{
+    color: inherit;
+}
+.logo img {
+    width: 15em;
+}
+
+.logo {
+    width: 15em;
+}
+
+.btn-primary {
+    background-color: var(--color-secundario) !important;
+    border: none !important;
+    font-weight: 600 !important;
+}
+
+.btn-outline-primary {
+    color: var(--color-secundario) !important;
+    border-color: var(--color-secundario) !important;
+    font-weight: 600 !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--color-secundario) !important;
+    color: #fff !important;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 2rem;
+    position: relative;
+    z-index: 5;
+}
+
+.btn-header {
+    margin-left: 1rem;
+    z-index: 10;
+
+}
+
+
+/*******************************************************************/
+/*menu hamburguesa*/
+.avatar-button {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.dropdown-menu {
+    width: 250px;
+}
+
+.dropdown-header {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.text-logout{
+    color: var(--color-secundario) !important;
+    font-weight: 600 !important;
+}
+
+.js-profe-menu{
+    display: none;
+}
+
+.js-alumno-menu{
+    display: none;
+}
+
+.js-botones{
+    display: block;
+}

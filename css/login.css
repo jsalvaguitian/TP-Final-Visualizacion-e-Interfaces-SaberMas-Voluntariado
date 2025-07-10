@@ -1,0 +1,174 @@
+
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    --color-primario: #6b59cb;
+    --color-secundario: #ff9040;
+    --color-fondo: #f4f4f4;
+    --color-texto: #333333;
+}
+
+body,
+html {
+    height: 100vh;
+    margin: 0;
+    background-color: var(--color-primario);
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.login-container {
+    width: 90%;
+
+}
+
+.login-left {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem 3rem;
+}
+
+.login-left h2 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.btn-login {
+    background-color: transparent;
+    border: 1px solid #1b0983;
+    color: var(--color-texto);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.btn-login:hover {
+    border-color: var(--color-secundario);
+    color: var(--color-secundario);
+}
+
+.btn-email {
+    background-color: var(--color-secundario);
+    color: #fff ;
+    border: none ;
+}
+
+.btn-email:hover {
+    background-color: #ff7b1f ;
+    color: #fff ;
+}
+
+.form-control {
+    background-color: #fff ;
+    color: var(--color-texto) ;
+}
+
+.form-control:focus {
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 0 0.2rem rgba(255, 144, 64, 0.25);
+}
+
+.divider {
+    text-align: center;
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    height: 1px;
+    background: #333;
+    position: absolute;
+    top: 50%;
+    width: 45%;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+.divider span {
+    padding: 0 1rem;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.login-right {
+    background: url('../assets/aula-virtual-y-espacio-de-estudio.jpg') no-repeat center center/cover;
+}
+
+.logo {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 0.5rem 0rem;
+    border-radius: 8px;
+}
+
+.logo p {
+    color: #0b0c10;
+    font-size: 1.3rem;
+    margin: 0;
+    font-family:'Nunito', sans-serif;
+    line-height: 1;
+}
+
+.logo img {
+    height: 2rem;
+    width: auto;
+}
+
+.logo-a {
+    text-decoration: none;
+}
+
+.texto-registro {
+    font-size: 0.95rem;
+    color: var(--color-texto);
+}
+
+.enlace-registro {
+    color: var(--color-secundario);
+    font-weight: 500;
+    margin-left: 0.3rem;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.enlace-registro:hover {
+    color: #ff7b1f;
+    text-decoration: underline;
+}
+
+.enlace-registro-profe {
+    color: var(--color-primario);
+    font-weight: 500;
+    margin-left: 0.3rem;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.enlace-registro-profe:hover {
+    color: #53469b;
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 768px) {
+    .login-right {
+        display: none;
+    }
+}
