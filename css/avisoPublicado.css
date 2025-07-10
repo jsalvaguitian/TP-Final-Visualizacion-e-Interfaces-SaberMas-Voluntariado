@@ -1,0 +1,19 @@
+.avatar-inicial {
+  width: 40px;
+  height: 40px;
+  background-color: #7a3fff; /* Morado fuerte */
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-transform: uppercase;
+}
+
+
+.col-md-4 small {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
