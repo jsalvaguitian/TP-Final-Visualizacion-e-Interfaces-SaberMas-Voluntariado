@@ -1,20 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis mensajes</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-
-    <link href="../css/mensajesAlumno.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mis Solicitudes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/mensajesProfesor.css">
     <link rel="stylesheet" href="../../css/header-footer.css">
+    <style>
+        body {
+            background-color: #f9f9f9;
+        }
+
+        .card-solicitud {
+            background: white;
+            border-left: 6px solid #6b59cb;
+            padding: 1.2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1rem;
+        }
+
+        .estado {
+            font-weight: bold;
+        }
+
+        .foto-solicitante {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nombre-hora {
+            margin-left: 1rem;
+        }
+    </style>
 </head>
 
 <body>
-
     <header class="container-header">
         <div class="logo">
             <a href="../../index.html"><img src="../../assets/SaberMasVector3.svg" alt="" srcset=""></a>
@@ -38,17 +65,21 @@
                         <h6 class="dropdown-header"><span class="user-mail">juan@email.com </span></h6>
                     </li>
                     <li><a class="dropdown-item" href="./pages/vistaMensajesAlumnos.html"><i
-                                class="bi bi-chat-dots"></i> Mis mensajes</a>
+                                class="bi bi-chat-dots"></i> Mis
+                            mensajes</a>
                     </li>
                     <li><a class="dropdown-item" href="./pages/vistaMisReuniones.html"><i
-                                class="bi bi-calendar-event"></i> Mis reuniones</a></li>
+                                class="bi bi-calendar-event"></i> Mis
+                            reuniones</a></li>
                     <li><a class="dropdown-item" href="./pages/vistaMisDonaciones.html"><i class="bi bi-cash-coin"></i>
-                            Mis donaciones</a></li>
+                            Mis
+                            donaciones</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
                     <li><a class="dropdown-item" href="./pages/vistaMiPerfil.html"><i class="bi bi-person-circle"></i>
-                            Mi perfil</a></li>
+                            Mi
+                            perfil</a></li>
                     <li><a class="dropdown-item text-logout js-btn-login-al" href="#"><i
                                 class="bi bi-box-arrow-right"></i> Cerrar
                             sesión</a></li>
@@ -81,86 +112,81 @@
                     <li><a class="dropdown-item" href="./pages/pagesProfesor/vistaMiPerfilProfesor.html"><i
                                 class="bi bi-person-circle"></i> Mi perfil</a></li>
                     <li><a class="dropdown-item text-logout js-btn-login-prof" href="#"><i
-                                class="bi bi-box-arrow-right"></i> Cerrar
+                                class="bi bi-box-arrow-right"></i>
+                            Cerrar
                             sesión</a></li>
                 </ul>
             </div>
             <!---#########################################-->
         </div>
     </header>
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-sm bg-body-tertiary bg-violeta nav-underline" data-bs-theme="dark">
         <div class="container-fluid">
-
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="vistaMiPerfil.html">Mi perfil</a>
+                        <a class="nav-link" href="vistaMiPerfilProfesor.html">Mi perfil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="vistaMensajesAlumnos.html">Mis mensajes</a>
+                        <a class="nav-link" href="vistaMensajesProfesor.html">Mis mensajes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="vistaMisReuniones.html">Mis reuniones</a>
+                        <a class="nav-link" href="vistaMisReunionesProfesor.html">Mis reuniones</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="vistaMisDonaciones.html">Mis donaciones</a>
+                        <a class="nav-link" href="vistaDonacionesProfesor.html">Mis donaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  active" href="vistaMisSolicitudesProfesor.html">Mis solicitudes</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-    <div class="container-fluid vh-100">
-        <div class="row h-100">
-            <!-- Panel Izquierdo -->
-            <div class="col-md-4 col-lg-3 bg-white border-end d-flex flex-column">
-                <div class="p-3 border-bottom">
-                    <div class="dropdown">
-                        <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button"
-                            data-bs-toggle="dropdown">
-                            Todos mis contactos
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Todos</a></li>
-                            <li><a class="dropdown-item" href="#">Solicitudes rechazadas</a></li>
-                            <li><a class="dropdown-item" href="#">Solicitudes enviadas</a></li>
-                        </ul>
+    <div class="container py-5">
+        <!-- Solicitud 1 -->
+        <div class="card-solicitud">
+            <div class="d-flex justify-content-between">
+                <!-- FOTO + INFO -->
+                <div class="d-flex">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Lucía Gómez"
+                        class="foto-solicitante">
+                    <div class="nombre-hora">
+                        <h5 class="mb-1">Lucía Gómez</h5>
+                        <p class="mb-1 text-muted">Enviada el 10/07/2025 a las 15:30 hs</p>
+                        <span class="estado text-warning">Pendiente</span>
                     </div>
-                    <input type="text" class="form-control mt-3 input-custom" placeholder="Buscar contacto...">
                 </div>
-                <!-- Lista de contactos -->
-                <div class="list-group list-group-flush" id="listaContactos">
-                    <button class="list-group-item list-group-item-action d-flex align-items-center gap-2"
-                        onclick="abrirChat()">
-                        <img src="https://randomuser.me/api/portraits/men/72.jpg" alt="Profe" width="40" height="40"
-                            class="rounded-circle">
-                        <span>Prof. de Matemática</span>
-                    </button>
+                <!-- BOTONES -->
+                <div class="d-flex align-items-center gap-2">
+                    <button class="btn btn-sm btn-success">Aceptar</button>
+                    <button class="btn btn-sm btn-outline-danger">Rechazar</button>
                 </div>
-            </div>
-
-
-            <!-- Panel derecho -->
-            <div class="col-md-8 col-lg-9 d-flex flex-column justify-content-center align-items-center bg-white"
-                id="panelMensaje">
-                <div class="bg-light rounded p-4 text-center w-75">
-                    <h5 class="text-primary violeta">Ningún mensaje</h5>
-                    <p>Revisa tu cuenta para encontrar recomendaciones y contactar a tus profesores cuando los
-                        necesites.</p>
-                </div>
-                <button class="btn btn-primary mt-4">Buscar profesores</button>
             </div>
         </div>
+
+        <!-- Solicitud 2 -->
+        <div class="card-solicitud">
+            <div class="d-flex justify-content-between">
+                <div class="d-flex">
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Pedro Suárez"
+                        class="foto-solicitante">
+                    <div class="nombre-hora">
+                        <h5 class="mb-1">Pedro Suárez</h5>
+                        <p class="mb-1 text-muted">Enviada el 09/07/2025 a las 18:10 hs</p>
+                        <span class="estado text-success">Aceptada</span>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <button class="btn btn-sm btn-secondary">Ver reunión</button>
+                </div>
+            </div>
+        </div>
+
     </div>
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-        crossorigin="anonymous"></script>
-
-    <script src="../script/mensajesAlumno.js"></script>
     <script src="../../script/cerrar-sesion.js"></script>
+
 </body>
 
 </html>
