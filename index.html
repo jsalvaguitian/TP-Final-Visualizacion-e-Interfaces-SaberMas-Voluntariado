@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div class="container-1eraparte">
+    <section class="container-1eraparte">
         <div class="triangulo-der-sup"></div>
         <div class="triangulo-izq-inf"></div>
 
@@ -24,11 +24,12 @@
                 <img src="./assets/SaberMasVector3.svg" alt="" srcset="">
             </div>
             <div class="container-btn">
-                <a class="btn btn-primary" href="./pages/registrarseEstudiante.html">Quiero aprender</a>
-                <a class="btn btn-primary btn-reg-prof" href="./pages/vistaRegistroProfesor.html">Quiero enseñar</a>
+                <a class="btn btn-outline-primary" href="./pages/login.html">Iniciar sesion</a>
+                <a class="btn btn-primary btn-header" href="./pages/registrarseEstudiante.html">Quiero aprender</a>
+                <a class="btn btn-primary btn-header" href="./pages/registroProfesor.html">Quiero enseñar</a>
             </div>
         </header>
-        <section class="principal">
+        <article class="principal">
             <h1 class="titulo">SABER MÁS</h1>
             <p class="subtitulo">La comunidad donde se aprende enseñando y se enseña aprendiendo.</p>
             <form class="d-flex mt-3 justify-content-center mx-auto" style="max-width: 500px; width: 100%;">
@@ -136,15 +137,15 @@
                     id="rightBtn">
                     <i class="bi bi-chevron-right"></i>
                 </button>
-        </section>
+        </article>
 
-    </div>
-    <div class="container-2daparte">
-        <h1 class="titulo2">Aprendé en 4 pasos simples.</h1>
+    </section>
+    <section class="container-2daparte">
+        <h2 class="titulo2">Aprendé en 4 pasos simples.</h2>
         <div class="container-pasos">
             <div class="cuadro">
                 <div class="cuadro-img">
-                    <img src="./assets/searching.png" alt="" >
+                    <img src="./assets/searching.png" alt="">
                 </div>
                 <div class="cuadro-text">
                     <h4>1. Elegí la materia que necesitás reforzar</h4>
@@ -154,7 +155,7 @@
             </div>
             <div class="cuadro">
                 <div class="cuadro-img">
-                    <img src="./assets/school.png" alt="" >
+                    <img src="./assets/school.png" alt="">
                 </div>
                 <div class="cuadro-text">
                     <h4>2.Encontrá a tu profe ideal.</h4>
@@ -164,7 +165,7 @@
             </div>
             <div class="cuadro">
                 <div class="cuadro-img">
-                    <img src="./assets/schedule.png" alt="" >
+                    <img src="./assets/schedule.png" alt="">
                 </div>
                 <div class="cuadro-text">
                     <h4>3.Agendá el día y horario que más te convenga.</h4>
@@ -183,15 +184,226 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container-3eraparte">
-        
-    </div>
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <button class="btn btn-primary btn-empezar"
+                onclick="window.location.href='./pages/vistaListaProf.html'">Quiero empezar</button>
+        </div>
+    </section>
+    <section class="container-3eraparte">
 
-    
-    <footer>
+        <h2 class="titulo2"> Profesores recomendados</h2>
+        <!-- Carrusel de Profesores Recomendados -->
+        <div id="profesoresCarrusel" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner">
 
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100">
+                                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Profesor 1">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Profe Ana</h5>
+                                    <p class="card-text">Especialista en Matemática</p>
+                                    <a href="#" class="btn btn-primary">Ver perfil</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100">
+                                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Profesor 2">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Profe Juan</h5>
+                                    <p class="card-text">Experto en Programación</p>
+                                    <a href="#" class="btn btn-primary">Ver perfil</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100">
+                                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Profesor 3">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Profe Laura</h5>
+                                    <p class="card-text">Historia y Ciencias Sociales</p>
+                                    <a href="#" class="btn btn-primary">Ver perfil</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100">
+                                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Profesor 4">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Profe Diego</h5>
+                                    <p class="card-text">Biología y Ciencias Naturales</p>
+                                    <a href="#" class="btn btn-primary">Ver perfil</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100">
+                                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Profesor 5">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Profe Carla</h5>
+                                    <p class="card-text">Lengua y Literatura</p>
+                                    <a href="#" class="btn btn-primary">Ver perfil</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="card h-100">
+                                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Profesor 6">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Profe Martín</h5>
+                                    <p class="card-text">Educación Física</p>
+                                    <a href="#" class="btn btn-primary">Ver perfil</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#profesoresCarrusel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#profesoresCarrusel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+
+    </section>
+    <section class="container-4eraparte">
+
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- Testimonio 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="testimonial-card p-4 h-100 bg-white rounded border">
+                        <p class="mb-3">“Gracias a estas clases pude entender Matemática y aprobar el trimestre. El
+                            profe explica súper claro.”</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Alumno"
+                                class="rounded-circle me-2" width="40">
+                            <div>
+                                <strong>Luz Gómez</strong><br>
+                                5º año · Escuela Técnica Nº4
+                            </div>
+                        </div>
+                        <a href="#" class="d-block mt-3 small text-primary text-decoration-none">Ver curso de
+                            Matemática</a>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="testimonial-card p-4 h-100 bg-white rounded border">
+                        <p class="mb-3">“Yo no entendía nada de Historia, pero con los videos y ejercicios pude
+                            prepararme para rendir bien.”</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Alumno"
+                                class="rounded-circle me-2" width="40">
+                            <div>
+                                <strong>Franco Salinas</strong><br>
+                                4º año · Instituto Belgrano
+                            </div>
+                        </div>
+                        <a href="#" class="d-block mt-3 small text-primary text-decoration-none">Ver curso de
+                            Historia</a>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="testimonial-card p-4 h-100 bg-white rounded border">
+                        <p class="mb-3">“La plataforma me ayudó mucho con Lengua. Antes me costaba escribir textos,
+                            ahora me siento más segura.”</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/women/50.jpg" alt="Alumno"
+                                class="rounded-circle me-2" width="40">
+                            <div>
+                                <strong>Camila Torres</strong><br>
+                                3º año · Colegio San Martín
+                            </div>
+                        </div>
+                        <a href="#" class="d-block mt-3 small text-primary text-decoration-none">Ver curso de
+                            Lengua</a>
+                    </div>
+                </div>
+
+                <!-- Testimonio 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="testimonial-card p-4 h-100 bg-white rounded border">
+                        <p class="mb-3">“Con estas clases entendí cómo resolver problemas de Física. Ahora ya no
+                            tengo miedo a los exámenes.”</p>
+                        <div class="d-flex align-items-center">
+                            <img src="https://randomuser.me/api/portraits/men/60.jpg" alt="Alumno"
+                                class="rounded-circle me-2" width="40">
+                            <div>
+                                <strong>Tomás Vera</strong><br>
+                                6º año · E.E.S Nº12
+                            </div>
+                        </div>
+                        <a href="#" class="d-block mt-3 small text-primary text-decoration-none">Ver curso de
+                            Física</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <footer class="bg-dark text-light pt-4 pb-3">
+        <div class="container">
+            <div class="row">
+
+                <!-- Sobre nosotros -->
+                <div class="col-md-4 mb-3">
+                    <h5>Sobre nosotros</h5>
+                    <p class="small">Somos una plataforma educativa que ayuda a estudiantes de secundaria a mejorar su
+                        rendimiento con clases claras, prácticas y accesibles.</p>
+                </div>
+
+                <!-- Enlaces útiles -->
+                <div class="col-md-4 mb-3">
+                    <h5>Categorias
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-decoration-none text-light">Inicio</a></li>
+                        <li><a href="#" class="text-decoration-none text-light">Cursos</a></li>
+                        <li><a href="#" class="text-decoration-none text-light">Preguntas frecuentes</a></li>
+                        <li><a href="#" class="text-decoration-none text-light">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Redes sociales -->
+                <div class="col-md-4 mb-3">
+                    <h5>Seguinos</h5>
+                    <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i> Facebook</a><br>
+                    <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i> Instagram</a><br>
+                    <a href="#" class="text-light"><i class="bi bi-youtube"></i> YouTube</a>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-4 small text-muted">
+                <p class="text-light">© 2025 Plataforma Educativa · Todos los derechos reservados</p>
+                
+            </div>
+        </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
