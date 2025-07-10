@@ -1,5 +1,11 @@
 
 /********************************************/
+
+body{
+    margin:0;
+    padding: 0;
+}
+
 .a-logo{
     text-decoration: none;
     color: inherit;
@@ -83,4 +89,7 @@
 
 .js-botones{
     display: block;
+}
+.text-light{
+    text-decoration: none;
 }
