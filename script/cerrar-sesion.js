@@ -28,6 +28,7 @@ if (localStorage.getItem("Logueadoalumno") == 'true') {
         sidebarAlumno.style.display = 'none';
         sidebarNormal.style.display = 'block';
         sidebarProfe.style.display = 'none';
+        window.location.replace('/');
 
     })
 }
