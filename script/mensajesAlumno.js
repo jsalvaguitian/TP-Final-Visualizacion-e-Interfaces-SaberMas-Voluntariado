@@ -53,6 +53,6 @@ function volverInicio() {
         <h5 class="text-primary violeta">Ningún mensaje</h5>
         <p>No olvides seguir las recomendaciones de tu estatus que encontrarás en tu cuenta para obtener más alumnos/as.</p>
       </div>
-      <button class="btn btn-primary mt-4">Ver mi estatus</button>
+      <button class="btn btn-primary mt-4">Buscar profesores</button>
     `;
 }
