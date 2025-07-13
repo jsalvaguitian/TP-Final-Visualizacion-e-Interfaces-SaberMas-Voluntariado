@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mis Solicitudes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/mensajesProfesor.css">
+    <link rel="stylesheet" href="../../css/header-footer.css">
+    <style>
+        body {
+            background-color: #f9f9f9;
+        }
+
+        .card-solicitud {
+            background: white;
+            border-left: 6px solid #6b59cb;
+            padding: 1.2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1rem;
+        }
+
+        .estado {
+            font-weight: bold;
+        }
+
+        .foto-solicitante {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nombre-hora {
+            margin-left: 1rem;
+        }
+    </style>
+    <style>
+        body {
+            background-color: #f9f9f9;
+        }
+
+        .card-solicitud {
+            background: white;
+            border-left: 6px solid #6b59cb;
+            padding: 1.2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1rem;
+        }
+
+        .estado {
+            font-weight: bold;
+        }
+
+        .foto-profesor {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nombre-hora {
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container-header">
+        <div class="logo">
+            <a href="../../index.html"><img src="../../assets/SaberMasVector3.svg" alt="" srcset=""></a>
+        </div>
+
+        <div class="container-btn js-botones">
+            <a class="btn btn-outline-primary btn-login-n" href="./pages/login.html">Iniciar sesion</a>
+            <a class="btn btn-primary btn-header" href="./pages/registrarseEstudiante.html">Quiero aprender</a>
+            <a class="btn btn-primary btn-header" href="./pages/registroProfesor.html">Quiero enseñar</a>
+        </div>
+        <!--#######################################################################-->
+        <div class="container-btn js-alumno-menu">
+
+            <div class="dropdown text-end">
+                <button class="btn btn-primary avatar-button" type="button" id="menuUsuario" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <span>¡Hola Juan!</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="menuUsuario">
+                    <li>
+                        <h6 class="dropdown-header"><span class="user-mail">juan@email.com </span></h6>
+                    </li>
+                    <li><a class="dropdown-item" href="./vistaMensajesAlumnos.html"><i class="bi bi-chat-dots"></i> Mis
+                            mensajes</a>
+                    </li>
+                    <li><a class="dropdown-item" href="./vistaMisReuniones.html"><i class="bi bi-calendar-event"></i>
+                            Mis
+                            reuniones</a></li>
+                    <li><a class="dropdown-item" href="./vistaMisDonaciones.html"><i class="bi bi-cash-coin"></i>
+                            Mis
+                            donaciones</a></li>
+                    <li>
+                        <a class="dropdown-item d-flex justify-content-between align-items-center"
+                            href="vistaMisSolicitudesAlumno.html">
+                            <span><i class="bi bi-person-check"></i> Mis solicitudes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="./vistaMiPerfil.html"><i class="bi bi-person-circle"></i>
+                            Mi
+                            perfil</a></li>
+                    <li><a class="dropdown-item text-logout js-btn-login-al" href="#"><i
+                                class="bi bi-box-arrow-right"></i> Cerrar
+                            sesión</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--#########################################-->
+        <div class="container-btn js-profe-menu">
+
+            <div class="dropdown text-end">
+                <button class="btn btn-primary avatar-button" type="button" id="menuUsuario" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <span>¡Hola Martin!</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="menuUsuario">
+                    <li>
+                        <h6 class="dropdown-header"><span class="user-mail">martin@email.com </span></h6>
+                    </li>
+                    <li><a class="dropdown-item" href="./vistaMensajesAlumnos.html"><i class="bi bi-chat-dots"></i> Mis
+                            mensajes</a>
+                    </li>
+                    <li><a class="dropdown-item" href="./vistaMisReuniones.html"><i class="bi bi-calendar-event"></i>
+                            Mis reuniones</a></li>
+                    <li><a class="dropdown-item" href="./vistaDonaciones.html"><i class="bi bi-cash-coin"></i> Mis
+                            donaciones</a></li>
+                    <li>
+                        <a class="dropdown-item d-flex justify-content-between align-items-center"
+                            href="vistaMisSolicitudes.html">
+                            <span><i class="bi bi-person-check"></i> Mis solicitudes</span>
+                            <span class="badge bg-danger rounded-pill">2</span>
+                        </a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="./vistaMiPerfil.html"><i class="bi bi-person-circle"></i> Mi
+                            perfil</a></li>
+                    <li><a class="dropdown-item text-logout js-btn-login-prof" href="#"><i
+                                class="bi bi-box-arrow-right"></i>
+                            Cerrar
+                            sesión</a></li>
+                </ul>
+            </div>
+            <!---#########################################-->
+        </div>
+    </header>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-sm bg-body-tertiary bg-violeta nav-underline" data-bs-theme="dark">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="vistaMiPerfil.html">Mi perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vistaMensajesAlumnos.html">Mis mensajes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vistaMisReuniones.html">Mis reuniones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vistaMisDonaciones.html">Mis donaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  active" href="vistaMisSolicitudesAlumno.html">Mis solicitudes</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container py-5">
+        <!-- Tarjeta de solicitud -->
+        <div class="card-solicitud" data-id="1">
+            <div class="d-flex justify-content-between">
+                <div class="d-flex">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" class="foto-profesor" alt="Profe Martín">
+                    <div class="nombre-hora">
+                        <h5 class="mb-1">Profesor Martín</h5>
+                        <p class="mb-1 text-muted">Solicitada el 11/07/2025 a las 14:00 hs</p>
+                        <span class="estado text-warning">Pendiente</span>
+                        <p class="mt-2 mb-0"><strong>Mensaje enviado:</strong> <span class="mensaje-envio">Hola profe,
+                                me gustaría repasar integrales. ¿Está disponible esta semana?</span></p>
+                    </div>
+                </div>
+                <div class="d-flex flex-column align-items-end gap-2">
+                    <button class="btn btn-sm btn-outline-primary" onclick="abrirModalEditar(this)">Editar
+                        mensaje</button>
+                    <button class="btn btn-sm btn-outline-danger" onclick="cancelarSolicitud(this)">Cancelar
+                        solicitud</button>
+                </div>
+            </div>
+        </div>
+        <!-- Tarjeta de solicitud aceptada -->
+        <div class="card-solicitud" data-id="2">
+            <div class="d-flex justify-content-between">
+                <div class="d-flex">
+                    <img src="https://randomuser.me/api/portraits/women/55.jpg" class="foto-profesor" alt="Profe Carla">
+                    <div class="nombre-hora">
+                        <h5 class="mb-1">Profesora Carla</h5>
+                        <p class="mb-1 text-muted">Solicitada el 08/07/2025 a las 10:45 hs</p>
+                        <span class="estado text-success">Aceptada</span>
+                        <p class="mt-2 mb-0"><strong>Mensaje enviado:</strong> <span class="mensaje-envio">Hola Carla,
+                                necesito ayuda con funciones lineales. Gracias!</span></p>
+                    </div>
+                </div>
+                <div class="d-flex flex-column align-items-end justify-content-center gap-2">
+                    <a href="vistaMensajesAlumnos.html" class="btn btn-sm btn-success">Ver chat</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <!-- Modal de edición -->
+    <div class="modal fade" id="modalEditarMensaje" tabindex="-1" aria-labelledby="modalEditarMensajeLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEditarMensajeLabel">Editar mensaje al profesor</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <textarea class="form-control" rows="4" id="nuevoMensaje"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="guardarMensajeEditado()">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../script/cerrar-sesion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script>
+        let mensajeActual = null;
+
+        function abrirModalEditar(boton) {
+            const tarjeta = boton.closest('.card-solicitud');
+            mensajeActual = tarjeta.querySelector('.mensaje-envio');
+            document.getElementById('nuevoMensaje').value = mensajeActual.textContent;
+            const modal = new bootstrap.Modal(document.getElementById('modalEditarMensaje'));
+            modal.show();
+        }
+
+        function guardarMensajeEditado() {
+            const nuevo = document.getElementById('nuevoMensaje').value.trim();
+            if (nuevo && mensajeActual) {
+                mensajeActual.textContent = nuevo;
+                bootstrap.Modal.getInstance(document.getElementById('modalEditarMensaje')).hide();
+            }
+        }
+
+        function cancelarSolicitud(boton) {
+            if (confirm("¿Seguro que querés cancelar esta solicitud?")) {
+                const tarjeta = boton.closest('.card-solicitud');
+                tarjeta.remove();
+                // Aquí podrías hacer una llamada con fetch para eliminarla del backend
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -125,3 +125,8 @@ color: var(--color-fondo) !important;
     --bs-btn-hover-bg: #ff9040;
     --bs-btn-hover-border-color:#ff9040;
 }
+
+.bi-heart, .bi-heart-fill {
+  transition: color 0.2s ease;
+  color: #dc3545;
+}
