@@ -50,9 +50,11 @@ function volverInicio() {
   const panel = document.getElementById("panelMensaje");
   panel.innerHTML = `
       <div class="bg-light rounded p-4 text-center w-75">
-        <h5 class="text-primary violeta">Ningún mensaje</h5>
-        <p>No olvides seguir las recomendaciones de tu estatus que encontrarás en tu cuenta para obtener más alumnos/as.</p>
-      </div>
-      <button class="btn btn-primary mt-4">Ver mi estatus</button>
+                    <h5 class="text-primary violeta">Ningún mensaje</h5>
+                    <p>Revisa tu cuenta para encontrar recomendaciones y contactar a tus profesores cuando los
+                        necesites.</p>
+                </div>
+                <a href="vistaAvisosProfes.html" class="btn btn-primary mt-4">Buscar profesores</a>
     `;
 }
+
