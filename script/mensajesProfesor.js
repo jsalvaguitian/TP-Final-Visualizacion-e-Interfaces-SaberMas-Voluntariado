@@ -9,7 +9,7 @@ function abrirChat() {
             <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Alumno" width="50" height="50" class="rounded-circle">
             <h5 class="mb-0 text-primary color-texto">Juan Pérez</h5>
           </div>
-          <button class="btn btn-sm btn-outline-success" onclick="iniciarReunion()">Iniciar reunión</button>
+          <button class="btn btn-sm btn-secondary" onclick="iniciarReunion()">Iniciar reunión</button>
         </div>
         <div id="chatBox" class="chat-box bg-white border rounded p-3 mt-2 mb-3">
           <div class="mensaje mensaje-alumno">Hola Pepe, ¿cómo vas con los ejercicios de fracciones?</div>

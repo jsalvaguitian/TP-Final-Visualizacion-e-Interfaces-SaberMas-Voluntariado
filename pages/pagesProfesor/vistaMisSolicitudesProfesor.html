@@ -99,18 +99,24 @@
                     <li>
                         <h6 class="dropdown-header"><span class="user-mail">martin@email.com </span></h6>
                     </li>
-                    <li><a class="dropdown-item" href="./vistaMensajesProfesor.html"><i
-                                class="bi bi-chat-dots"></i> Mis mensajes</a>
+                    <li><a class="dropdown-item" href="./vistaMensajesProfesor.html"><i class="bi bi-chat-dots"></i> Mis
+                            mensajes</a>
                     </li>
                     <li><a class="dropdown-item" href="./vistaMisReunionesProfesor.html"><i
                                 class="bi bi-calendar-event"></i> Mis reuniones</a></li>
-                    <li><a class="dropdown-item" href="./vistaDonacionesProfesor.html"><i
-                                class="bi bi-cash-coin"></i> Mis donaciones</a></li>
+                    <li><a class="dropdown-item" href="./vistaDonacionesProfesor.html"><i class="bi bi-cash-coin"></i>
+                            Mis donaciones</a></li>
+                    <li>
+                        <a class="dropdown-item d-flex justify-content-between align-items-center"
+                            href="./vistaMisSolicitudesProfesor.html">
+                            <span><i class="bi bi-person-check"></i> Mis solicitudes</span>
+                        </a>
+                    </li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="./vistaMiPerfilProfesor.html"><i
-                                class="bi bi-person-circle"></i> Mi perfil</a></li>
+                    <li><a class="dropdown-item" href="./vistaMiPerfilProfesor.html"><i class="bi bi-person-circle"></i>
+                            Mi perfil</a></li>
                     <li><a class="dropdown-item text-logout js-btn-login-prof" href="#"><i
                                 class="bi bi-box-arrow-right"></i>
                             Cerrar
@@ -148,7 +154,6 @@
         <!-- Solicitud 1 -->
         <div class="card-solicitud">
             <div class="d-flex justify-content-between">
-                <!-- FOTO + INFO -->
                 <div class="d-flex">
                     <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Lucía Gómez"
                         class="foto-solicitante">
@@ -156,12 +161,12 @@
                         <h5 class="mb-1">Lucía Gómez</h5>
                         <p class="mb-1 text-muted">Enviada el 10/07/2025 a las 15:30 hs</p>
                         <span class="estado text-warning">Pendiente</span>
+                        <p class="fst-italic mt-2">"Hola profe, quisiera tener una clase sobre geometría. ¡Gracias!"</p>
                     </div>
                 </div>
-                <!-- BOTONES -->
                 <div class="d-flex align-items-center gap-2">
-                    <button class="btn btn-sm btn-success">Aceptar</button>
-                    <button class="btn btn-sm btn-outline-danger">Rechazar</button>
+                    <button class="btn btn-sm btn-success" onclick="aceptarSolicitud(this)">Aceptar</button>
+                    <button class="btn btn-sm btn-outline-danger" onclick="rechazarSolicitud(this)">Rechazar</button>
                 </div>
             </div>
         </div>
@@ -176,10 +181,13 @@
                         <h5 class="mb-1">Pedro Suárez</h5>
                         <p class="mb-1 text-muted">Enviada el 09/07/2025 a las 18:10 hs</p>
                         <span class="estado text-success">Aceptada</span>
+                        <p class="fst-italic mt-2">"Hola profe, quisiera tener una clase sobre matemática. ¡Gracias!"
+                        </p>
                     </div>
                 </div>
                 <div class="d-flex align-items-center">
-                    <button class="btn btn-sm btn-secondary">Ver reunión</button>
+                    <button class="btn btn-sm btn-secondary"
+                        onclick="window.location.href='vistaMensajesProfesor.html'">Ver chat</button>
                 </div>
             </div>
         </div>
@@ -189,7 +197,29 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
+    <script>
+        function aceptarSolicitud(boton) {
+            const card = boton.closest(".card-solicitud");
+            const estado = card.querySelector(".estado");
+            const botones = card.querySelector(".d-flex.align-items-center.gap-2");
 
+            estado.textContent = "Aceptada";
+            estado.className = "estado text-success";
+
+            botones.innerHTML = `<button class="btn btn-sm btn-secondary" onclick="window.location.href='vistaMensajesProfesor.html'">Ver chat</button>`;
+        }
+
+        function rechazarSolicitud(boton) {
+            const card = boton.closest(".card-solicitud");
+            const estado = card.querySelector(".estado");
+            const botones = card.querySelector(".d-flex.align-items-center.gap-2");
+
+            estado.textContent = "Rechazada";
+            estado.className = "estado text-danger";
+
+            botones.innerHTML = `<span class="text-muted fst-italic">Solicitud rechazada</span>`;
+        }
+    </script>
 </body>
 
 </html>

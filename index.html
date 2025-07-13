@@ -72,10 +72,14 @@
             <div class="container-btn js-profe-menu">
 
                 <div class="dropdown text-end">
-                    <button class="btn btn-primary avatar-button" type="button" id="menuUsuario"
+
+                    <button class="btn btn-primary avatar-button position-relative" type="button" id="menuUsuario"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <span>¡Hola Martin!</span>
+                        <span class="notificacion-punto" id="puntoNotificacionProfe"></span>
                     </button>
+
+
                     <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="menuUsuario">
                         <li>
                             <h6 class="dropdown-header"><span class="user-mail">martin@email.com </span></h6>
@@ -596,6 +600,19 @@
         crossorigin="anonymous"></script>
     <script src="./script/home.js"></script>
     <script src="./script/cerrar-sesion.js"></script>
+    <script>
+        // Para ocultar el punto cuando abren el menú de usuario
+        document.querySelectorAll('[data-bs-toggle="dropdown"]').forEach(boton => {
+            boton.addEventListener('click', () => {
+                const puntoAlumno = document.getElementById('puntoNotificacionAlumno');
+                const puntoProfe = document.getElementById('puntoNotificacionProfe');
+
+                if (puntoAlumno) puntoAlumno.style.display = 'none';
+                if (puntoProfe) puntoProfe.style.display = 'none';
+            });
+        });
+    </script>
+
 </body>
 
 </html>
