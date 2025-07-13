@@ -75,6 +75,13 @@
           <li><a class="dropdown-item" href="./vistaMisDonaciones.html"><i class="bi bi-cash-coin"></i> Mis
               donaciones</a></li>
           <li>
+            <a class="dropdown-item d-flex justify-content-between align-items-center"
+              href="vistaMisSolicitudesAlumno.html">
+              <span><i class="bi bi-person-check"></i> Mis solicitudes</span>
+              <span class="badge bg-danger rounded-pill">1</span>
+            </a>
+          </li>
+          <li>
             <hr class="dropdown-divider">
           </li>
           <li><a class="dropdown-item" href="./vistaMiPerfil.html"><i class="bi bi-person-circle"></i> Mi
@@ -101,8 +108,8 @@
           <li><a class="dropdown-item" href="./pagesProfesor/vistaMensajesProfesor.html"><i class="bi bi-chat-dots"></i>
               Mis mensajes</a>
           </li>
-          <li><a class="dropdown-item" href="./pagesProfesor/vistaSalaReunion.html"><i
-                class="bi bi-calendar-event"></i> Mis reuniones</a></li>
+          <li><a class="dropdown-item" href="./pagesProfesor/vistaSalaReunion.html"><i class="bi bi-calendar-event"></i>
+              Mis reuniones</a></li>
           <li><a class="dropdown-item" href="./pagesProfesor/vistaDonacionesProfesor.html"><i
                 class="bi bi-cash-coin"></i> Mis donaciones</a></li>
           <li>
@@ -173,7 +180,10 @@
             </div>
             <div class="col-md-3 text-center">
               <a href="vistaAvisoPublicado.html" class="btn btn-secondary mb-2 w-100">Ver más</a>
-              <a href="vistaMensajesAlumnos.html" class="btn btn-primary w-100">Solicitar clase</a>
+              <!-- Botón que abre el modal -->
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalSolicitud">
+                Solicitar clase
+              </button>
             </div>
           </div>
         </div>
@@ -199,7 +209,9 @@
             </div>
             <div class="col-md-3 text-center">
               <a href="vistaAvisoPublicado.html" class="btn btn-secondary mb-2 w-100">Ver más</a>
-              <a href="vistaAvisoPublicado.html" class="btn btn-primary mb-2 w-100">Solicitar clase</a>
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalSolicitud">
+                Solicitar clase
+              </button>
             </div>
           </div>
         </div>
@@ -226,7 +238,9 @@
             </div>
             <div class="col-md-3 text-center">
               <a href="vistaAvisoPublicado.html" class="btn btn-secondary mb-2 w-100">Ver más</a>
-              <a href="vistaAvisoPublicado.html" class="btn btn-primary mb-2 w-100">Solicitar clase</a>
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalSolicitud">
+                Solicitar clase
+              </button>
             </div>
           </div>
         </div>
@@ -252,7 +266,9 @@
             </div>
             <div class="col-md-3 text-center">
               <a href="vistaAvisoPublicado.html" class="btn btn-secondary mb-2 w-100">Ver más</a>
-              <a href="vistaAvisoPublicado.html" class="btn btn-primary mb-2 w-100">Solicitar clase</a>
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalSolicitud">
+                Solicitar clase
+              </button>
             </div>
           </div>
         </div>
@@ -278,7 +294,9 @@
             </div>
             <div class="col-md-3 text-center">
               <a href="vistaAvisoPublicado.html" class="btn btn-secondary mb-2 w-100">Ver más</a>
-              <a href="vistaAvisoPublicado.html" class="btn btn-primary mb-2 w-100">Solicitar clase</a>
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalSolicitud">
+                Solicitar clase
+              </button>
             </div>
           </div>
         </div>
@@ -304,7 +322,9 @@
             </div>
             <div class="col-md-3 text-center">
               <a href="vistaAvisoPublicado.html" class="btn btn-secondary mb-2 w-100">Ver más</a>
-              <a href="vistaAvisoPublicado.html" class="btn btn-primary mb-2 w-100">Solicitar clase</a>
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalSolicitud">
+                Solicitar clase
+              </button>
             </div>
           </div>
         </div>
@@ -330,11 +350,33 @@
             </div>
             <div class="col-md-3 text-center">
               <a href="vistaAvisoPublicado.html" class="btn btn-secondary mb-2 w-100">Ver más</a>
-              <a href="vistaAvisoPublicado.html" class="btn btn-primary mb-2 w-100">Solicitar clase</a>
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalSolicitud">
+                Solicitar clase
+              </button>
             </div>
           </div>
         </div>
 
+      </div>
+    </div>
+  </div>
+  <!-- Modal de solicitud -->
+  <div class="modal fade" id="modalSolicitud" tabindex="-1" aria-labelledby="modalSolicitudLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content rounded-4 shadow">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalSolicitudLabel">Solicitar clase</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <label for="mensajeSolicitud" class="form-label">¿Qué necesitás repasar?</label>
+          <textarea class="form-control" id="mensajeSolicitud" rows="3"
+            placeholder="Ej: Me cuesta geometría..."></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" onclick="enviarSolicitud()">Enviar solicitud</button>
+        </div>
       </div>
     </div>
   </div>
@@ -374,8 +416,31 @@
       </div>
     </div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../script/cerrar-sesion.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+        </script>
+  <script src="../script/cerrar-sesion.js"></script>
+  <script>
+    function enviarSolicitud() {
+      const mensaje = document.getElementById("mensajeSolicitud").value.trim();
+
+      if (mensaje === "") {
+        alert("Por favor escribí qué necesitás repasar.");
+        return;
+      }
+
+      // Acá podés enviar el mensaje al backend con fetch/AJAX o mostrar un alert
+      alert("¡Solicitud enviada! Profe va a leer: " + mensaje);
+
+      // Cerrar el modal
+      const modal = bootstrap.Modal.getInstance(document.getElementById('modalSolicitud'));
+      modal.hide();
+
+      // Limpiar campo
+      document.getElementById("mensajeSolicitud").value = "";
+    }
+  </script>
+
 </body>
 
 </html>

@@ -197,6 +197,18 @@
 
     <script src="../script/mensajesAlumno.js"></script>
     <script src="../../script/cerrar-sesion.js"></script>
+    <script>
+        // Lee los parámetros de la URL
+        const params = new URLSearchParams(window.location.search);
+        const profe = params.get('profe');
+
+        // Si hay parámetro y coincide, abre el chat correspondiente
+        if (profe === 'carla') {
+            abrirChatCarla();
+        } else if (profe === 'martin') {
+            abrirChat();
+        }
+    </script>
 </body>
 
 </html>

@@ -51,7 +51,7 @@ function abrirChatCarla() {
 
       <div class="alert alert-success p-2 mb-3 d-flex justify-content-between align-items-center">
         📹 Carla inició la reunión
-        <a href="https://meet.jit.si/Clase-Carla-Juan" class="btn btn-sm btn-primary">Unirme a la clase</a>
+        <a href="vistaSalaReunionAlumno.html" class="btn btn-sm btn-primary">Unirme a la clase</a>
       </div>
 
         <div id="chatBox" class="chat-box bg-white border rounded p-3 mb-3" style="flex: 1; overflow-y: auto;">
