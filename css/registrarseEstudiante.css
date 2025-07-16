@@ -78,3 +78,35 @@
     border-color: #333333;
     color: var(--color-texto);
 }
+
+
+
+header .container {
+    padding: 0;
+    margin: 0;
+}
+
+
+.img-logo{
+    height: 5rem;
+    /* height: 50px; */
+    width: auto;
+
+}
+
+
+
+a:hover {
+
+  opacity: 0.3;
+}
+
+
+/* Ajuste para mobile */
+@media (max-width: 576px) {
+  .img-logo {
+    height: 70px;
+  }
+
+
+}

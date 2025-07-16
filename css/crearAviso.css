@@ -1,15 +1,16 @@
 :root {
-    --color-primario: #6b59cb;
-    --color-secundario: #ff9040;
-    --color-fondo: #f4f4f4;
-    --color-texto: #333333;
+  --color-primario: #6b59cb;
+  --color-secundario: #ff9040;
+  --color-fondo: #f4f4f4;
+  --color-texto: #333333;
 }
 
 .btn-secondary {
-    background-color: var(--color-primario) !important;
-    border: none !important;
-    font-weight: 600 !important;
+  background-color: var(--color-primario) !important;
+  border: none !important;
+  font-weight: 600 !important;
 }
+
 
 
 
@@ -18,4 +19,46 @@
     width: 100%;
     margin-bottom: 10px;
   }
+}
+
+
+/* Para arreglar header en mobile  */
+@media (max-width: 320px) {
+  .container-header {
+    padding: 0.5rem 1rem;
+  }
+
+  .logo img {
+    width: 9em;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .avatar-button {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+}
+
+
+
+
+
+/* Para arreglar espacios en blanco */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }

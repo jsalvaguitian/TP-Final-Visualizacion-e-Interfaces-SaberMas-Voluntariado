@@ -98,3 +98,53 @@ body{
 .text-light{
     text-decoration: none;
 }
+
+
+
+
+
+/* 
+    Codigo sugerido para responsive:
+
+
+    1-Para arreglar header en mobile
+
+        @media (max-width: 576px) {
+        .container-header {
+            padding: 0.5rem 1rem;
+        }
+
+        .logo img {
+            width: 9em;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .avatar-button {
+            padding: 0.3rem 0.8rem;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+        }
+
+
+
+    2-Para arreglar espacios en blanco en desktop
+
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        }
+
+        body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        }
+
+        main {
+        flex: 1;
+        }
+*/

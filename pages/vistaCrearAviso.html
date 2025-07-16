@@ -107,16 +107,41 @@
                 <!-- Título -->
                 <h3 class="mb-4 text-center">Nuevo aviso como profesor particular</h3>
                 
-                <form class="needs-validation" action="../pages/pagesProfesor/vistaMiPerfilProfesor.html" method="get" novalidate>
+                <form class="needs-validation" action="../pages/vistaAvisosProfes.html" method="get" novalidate>
                 
                 
                     <!-- Sección 1: Descripción de la clase -->
                     <h5 class="mb-4">Explicá brevemente de qué y cómo das las clases:</h5>
+
                     <div class="mb-3">
                         <label for="materia" class="form-label">Materia</label>
-                        <input type="text" class="form-control" id="materia" placeholder="Ej: Inglés, Matemática" required>
-                        <div class="invalid-feedback">Por favor ingresá la materia.</div>
+                        <select class="form-select" id="materia" required>
+                            <option value="" disabled selected>Elegí una materia</option>
+                            <option>Matemática</option>
+                            <option>Lengua</option>
+                            <option>Historia</option>
+                            <option>Geografía</option>
+                            <option>Inglés</option>
+                            <option>Biología</option>
+                            <option>Estadística</option>
+                            <option>Música</option>
+                            <option>Francés</option>
+                            <option>Psicología aplicada</option>
+                            <option>Fotografía</option>
+                            <option>Análisis Matemático</option>
+                            <option>Dibujo Técnico</option>
+                            <option>Portugués</option>
+                            <option>Electrónica general</option>
+                            <option>Computación</option>
+                            <option>Práctica de diseño</option>
+                            <option>Educación ciudadana</option>
+                            <option>Programación</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Por favor seleccioná una materia.
+                        </div>
                     </div>
+
                     <div class="mb-3">
                         <label for="tituloAnuncio" class="form-label">Título del anuncio</label>
                         <input type="text" class="form-control" id="tituloAnuncio"
@@ -127,7 +152,7 @@
                         <label for="descripcion" class="form-label">Descripción</label>
                         <textarea class="form-control" id="descripcion" rows="4"
                             placeholder="Describe tu experiencia y cómo das las clases" maxlength="2400" required></textarea>
-                        <div class="form-text text-danger">Recordá no escribir datos de contacto en la descripción.</div>
+                        <div class="form-text text-warning-emphasis fw-medium">Recordá no escribir datos de contacto en la descripción.</div>
                         <div class="invalid-feedback">Por favor ingresá la descripción.</div>
                     </div>
                 
@@ -164,8 +189,8 @@
                 <div class="col-12 col-md-4 mb-4">
                     <h5>Enlaces útiles</h5>
                     <ul class="list-unstyled small">
-                        <li><a href="./index.html" class="text-decoration-none text-light">Inicio</a></li>
-                        <li><a href="./pages/vistaAvisosProfes.html" class="text-decoration-none text-light">Tutorías</a>
+                        <li><a href="../index.html" class="text-decoration-none text-light">Inicio</a></li>
+                        <li><a href="../pages/vistaAvisosProfes.html" class="text-decoration-none text-light">Tutorías</a>
                         </li>
                     </ul>
                 </div>
