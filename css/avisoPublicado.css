@@ -17,3 +17,43 @@
   font-size: 0.9rem;
   color: #6c757d;
 }
+
+
+
+@media (max-width: 768px) {
+  
+  .border-end {
+    border-right: none !important;
+    border-bottom: 1px solid #ddd !important;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  img.img-fluid.rounded-circle {
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+  .desc, .desc ul, .desc p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .container.aviso-publicado {
+    max-width: 720px;
+  }
+}
+
+
+.desc, .desc ul, .desc p, .desc li {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  hyphens: auto;
+}
+
+
