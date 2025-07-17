@@ -105,6 +105,77 @@
     font-size: 0.7rem;
 }
 
+.carrusel-categorias {
+    position: relative;         /* necesario para z-index */
+    z-index: 2;                 /* mayor que los triángulos */
+    background-color: #ffe3cf;
+    border-radius: 40px;
+    padding: 1rem 0;
+    overflow: hidden;
+    max-width: 70rem;
+    height: 87px;
+    margin-top: 1rem;
+}
+.buscador{
+    position: relative;         /* necesario para z-index */
+    z-index: 2;  
+
+}
+
+.titulo{
+    position: relative;         /* necesario para z-index */
+    z-index: 4;  
+}
+
+@media (max-width: 576px) {
+
+    
+.triangulo-der-sup {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 160px;
+    height: 160px;
+    background-color: var(--color-primario);
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+    z-index: 1;
+}
+    .logo{
+        width: 12rem;
+    }
+    .logo img{
+        width: 100%;
+    }
+    .avatar-button span{
+        font-size: 0.8rem;
+    }
+
+    .material-symbols-outlined{
+        font-size: 2rem;
+    }
+    .principal{
+        padding: 4rem 1rem;
+    }
+  .carrusel-categorias {
+    height: 65px;
+    padding: 0.5rem;
+    border-radius: 30px;
+  }
+
+  .categoria {
+    min-width: 50px;
+  }
+
+  .categoria-nombre {
+    font-size: 0.65rem;
+  }
+
+  .fs-3,
+  .fs-2 {
+    font-size: 1.2rem !important;
+  }
+}
+
 /****************************/
 .container-2daparte {
     width: 100%;
@@ -154,12 +225,14 @@
     width: 100%;
     /* height: 110vh;*/
     background-color: var(--color-primario);
+    padding: 2rem 0 3rem 0;
 }
 
 .container-4eraparte {
     width: 100%;
     /* height: 100vh;*/
     background-color: var(--color-secundario);
+    padding: 3rem ;
 
 }
 
@@ -187,7 +260,7 @@
 
 .titulo3 {
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 1rem;
     color: white;
 
 }
@@ -203,6 +276,84 @@
 .card-img-top {
     height: 17rem;
 }
+
+/*carrusel de los profes*/
+.contenedor-cards {
+    position: relative;
+}
+
+.carrusel-cards{
+    overflow: hidden;
+    align-items: stretch !important;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.card {
+
+    flex: 0 0 300px !important;
+    height: 100%;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out;
+
+  min-height: 490px; /* Ajustá a lo que normalmente mide la más larga */
+
+}
+
+.card img {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    /* Fijás la altura de la imagen */
+}
+
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.no-transition {
+    scroll-behavior: auto !important;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo oscuro semitransparente */
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    z-index: 10;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slider-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.btn-pagos-left {
+    left: 0.5rem;
+}
+
+.btn-pagos-right {
+    right: 0.5rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1); /* Íconos blancos */
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
 
 @media screen and (max-width:576px) {
     .titulo1 {
@@ -237,5 +388,7 @@
     .container-pasos{
         margin: 2rem;
     }
+
+    
 
 }

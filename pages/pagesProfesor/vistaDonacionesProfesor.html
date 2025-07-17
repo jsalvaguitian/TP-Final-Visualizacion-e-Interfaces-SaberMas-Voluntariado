@@ -19,13 +19,28 @@
       <a href="../../index.html"><img src="../../assets/SaberMasVector3.svg" alt="" srcset=""></a>
     </div>
 
-    <div class="container-btn js-botones">
+    <div class="container-btn js-botones d-none">
       <a class="btn btn-outline-primary btn-login-n" href="./pages/login.html">Iniciar sesion</a>
       <a class="btn btn-primary btn-header" href="./pages/registrarseEstudiante.html">Quiero aprender</a>
       <a class="btn btn-primary btn-header" href="./pages/registroProfesor.html">Quiero enseñar</a>
     </div>
+
+    <div class="dropdown text-end menu-responsive d-none">
+                <button class="btn btn-primary avatar-button text-center" type="button" id="menuUsuario" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="menuUsuario">
+                    <li><a class="dropdown-item" href="./pages/login.html"><i class="bi bi-box-arrow-in-right"></i>  Iniciar sesion</a>
+                    </li>
+                    <li><a class="dropdown-item" href="./pages/registrarseEstudiante.html"><i class="bi bi-person-plus"></i> Quiero aprender</a></li>
+                    <li><a class="dropdown-item" href="./pages/registroProfesor.html"><i class="bi bi-person-workspace"></i></i> Quiero enseñar</a></li>
+                </ul>
+            </div>
     <!--#######################################################################-->
-    <div class="container-btn js-alumno-menu">
+    <div class="container-btn js-alumno-menu d-none">
 
       <div class="dropdown text-end">
         <button class="btn btn-primary avatar-button" type="button" id="menuUsuario" data-bs-toggle="dropdown"
@@ -55,7 +70,7 @@
     </div>
 
     <!--#########################################-->
-    <div class="container-btn js-profe-menu">
+    <div class="container-btn js-profe-menu d-none">
 
       <div class="dropdown text-end">
         <button class="btn btn-primary avatar-button" type="button" id="menuUsuario" data-bs-toggle="dropdown"

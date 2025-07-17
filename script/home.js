@@ -9,3 +9,37 @@ const leftBtn = document.getElementById('leftBtn');
   rightBtn.addEventListener('click', () => {
     track.scrollBy({ left: 200, behavior: 'smooth' });
   });
+
+  const carrouselContainer = document.getElementById('carrousel-cards');
+const flechaIzq = document.getElementById('flechaIzq');
+const flechaDer = document.getElementById('flechaDer');
+
+// 👉 Acción al hacer clic en la flecha derecha
+flechaDer.addEventListener("click", () => {
+  const firstCard = carrouselContainer.querySelector('.card');
+  
+  // Animación opcional (deslizamiento)
+  carrouselContainer.style.transition = 'transform 0.3s ease-in-out';
+  carrouselContainer.style.transform = 'translateX(-320px)';
+
+  setTimeout(() => {
+    carrouselContainer.style.transition = 'none';
+    carrouselContainer.style.transform = 'translateX(0)';
+    carrouselContainer.appendChild(firstCard);
+  }, 300);
+});
+
+// 👉 Acción al hacer clic en la flecha izquierda
+flechaIzq.addEventListener("click", () => {
+  const cards = carrouselContainer.querySelectorAll('.card');
+  const lastCard = cards[cards.length - 1];
+
+  carrouselContainer.style.transition = 'none';
+  carrouselContainer.prepend(lastCard);
+  carrouselContainer.style.transform = 'translateX(-320px)';
+
+  setTimeout(() => {
+    carrouselContainer.style.transition = 'transform 0.3s ease-in-out';
+    carrouselContainer.style.transform = 'translateX(0)';
+  }, 10);
+});
