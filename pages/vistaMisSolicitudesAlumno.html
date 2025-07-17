@@ -68,6 +68,27 @@
         .nombre-hora {
             margin-left: 1rem;
         }
+
+        .layout-card-solicitud {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        @media (max-width: 767px) {
+            .layout-card-solicitud {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .acciones-solicitud {
+                align-self: start;
+            }
+
+            .acciones-solicitud button {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -84,19 +105,22 @@
         </div>
 
         <div class="dropdown text-end menu-responsive d-none">
-                <button class="btn btn-primary avatar-button text-center" type="button" id="menuUsuario" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <span class="material-symbols-outlined">
-                        menu
-                    </span>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="menuUsuario">
-                    <li><a class="dropdown-item" href="./pages/login.html"><i class="bi bi-box-arrow-in-right"></i>  Iniciar sesion</a>
-                    </li>
-                    <li><a class="dropdown-item" href="./pages/registrarseEstudiante.html"><i class="bi bi-person-plus"></i> Quiero aprender</a></li>
-                    <li><a class="dropdown-item" href="./pages/registroProfesor.html"><i class="bi bi-person-workspace"></i></i> Quiero enseñar</a></li>
-                </ul>
-            </div>
+            <button class="btn btn-primary avatar-button text-center" type="button" id="menuUsuario"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="menuUsuario">
+                <li><a class="dropdown-item" href="./pages/login.html"><i class="bi bi-box-arrow-in-right"></i> Iniciar
+                        sesion</a>
+                </li>
+                <li><a class="dropdown-item" href="./pages/registrarseEstudiante.html"><i class="bi bi-person-plus"></i>
+                        Quiero aprender</a></li>
+                <li><a class="dropdown-item" href="./pages/registroProfesor.html"><i
+                            class="bi bi-person-workspace"></i></i> Quiero enseñar</a></li>
+            </ul>
+        </div>
         <!--#######################################################################-->
         <div class="container-btn js-alumno-menu d-none">
 
@@ -205,7 +229,7 @@
     <div class="container py-5">
         <!-- Tarjeta de solicitud -->
         <div class="card-solicitud" data-id="1">
-            <div class="d-flex justify-content-between">
+            <div class="layout-card-solicitud">
                 <div class="d-flex">
                     <img src="https://randomuser.me/api/portraits/men/32.jpg" class="foto-profesor" alt="Profe Martín">
                     <div class="nombre-hora">
@@ -216,7 +240,7 @@
                                 me gustaría repasar integrales. ¿Está disponible esta semana?</span></p>
                     </div>
                 </div>
-                <div class="d-flex flex-column align-items-end gap-2">
+                <div class="acciones-solicitud d-flex align-items-center gap-2 flex-sm-row flex-column mt-sm-0 mt-3">
                     <button class="btn btn-sm btn-primary" onclick="abrirModalEditar(this)">Editar
                         mensaje</button>
                     <button class="btn btn-sm btn-danger" onclick="cancelarSolicitud(this)">Cancelar
@@ -226,7 +250,7 @@
         </div>
         <!-- Tarjeta de solicitud aceptada -->
         <div class="card-solicitud" data-id="2">
-            <div class="d-flex justify-content-between">
+            <div class="layout-card-solicitud">
                 <div class="d-flex">
                     <img src="https://randomuser.me/api/portraits/women/55.jpg" class="foto-profesor" alt="Profe Carla">
                     <div class="nombre-hora">
@@ -237,7 +261,7 @@
                                 necesito ayuda con funciones lineales. Gracias!</span></p>
                     </div>
                 </div>
-                <div class="d-flex flex-column align-items-end justify-content-center gap-2">
+                <div class="acciones-solicitud d-flex flex-column align-items-end justify-content-center gap-2">
                     <a href="vistaMensajesAlumnos.html?profe=carla" class="btn btn-sm btn-success">Ver chat</a>
                 </div>
             </div>

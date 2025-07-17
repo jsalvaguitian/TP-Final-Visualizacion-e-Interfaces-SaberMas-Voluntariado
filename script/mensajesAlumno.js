@@ -1,4 +1,8 @@
 function abrirChat() {
+  if (window.innerWidth <= 767) {
+    document.getElementById('listaContactos').classList.add('d-none');
+    document.getElementById('panelMensaje').classList.remove('d-none');
+  }
   const panel = document.getElementById("panelMensaje");
   panel.innerHTML = `
       <div class="d-flex flex-column w-100 p-4" style="height: 100%;">
@@ -31,6 +35,10 @@ function abrirChat() {
 }
 
 function abrirChatCarla() {
+  if (window.innerWidth <= 767) {
+    document.getElementById('listaContactos').classList.add('d-none');
+    document.getElementById('panelMensaje').classList.remove('d-none');
+  }
   const panel = document.getElementById("panelMensaje");
   panel.innerHTML = `
   <div class="d-flex flex-column w-100 p-4" style="height: 100%;">
@@ -100,6 +108,10 @@ function enviarMensaje() {
 }
 
 function volverInicio() {
+  if (window.innerWidth <= 767) {
+    document.getElementById('listaContactos').classList.remove('d-none');
+    document.getElementById('panelMensaje').classList.add('d-none');
+  }
   const panel = document.getElementById("panelMensaje");
   panel.innerHTML = `
       <div class="bg-light rounded p-4 text-center w-75">
@@ -119,3 +131,10 @@ function marcarFavorito(btn) {
     ? btn.setAttribute("title", "Quitar de favoritos")
     : btn.setAttribute("title", "Agregar a favoritos");
 }
+
+window.addEventListener('load', () => {
+  if (window.innerWidth <= 767) {
+    document.getElementById("panelMensaje").style.display = "none";
+    document.getElementById("listaContactos").style.display = "block";
+  }
+});

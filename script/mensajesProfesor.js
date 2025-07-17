@@ -1,4 +1,8 @@
 function abrirChat() {
+  if (window.innerWidth <= 767) {
+    document.getElementById('listaContactos').classList.add('d-none');
+    document.getElementById('panelMensaje').classList.remove('d-none');
+  }
   const panel = document.getElementById("panelMensaje");
   panel.innerHTML = `
       <div class="d-flex flex-column w-100 p-4" style="height: 100%;">
@@ -7,7 +11,7 @@ function abrirChat() {
         <div class="d-flex justify-content-between align-items-center mb-3">
           <div class="d-flex align-items-center gap-3">
             <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Alumno" width="50" height="50" class="rounded-circle">
-            <h5 class="mb-0 text-primary color-texto">Juan Pérez</h5>
+            <h5 class="mb-0 color-texto">Juan Pérez</h5>
           </div>
           <button class="btn btn-sm btn-secondary" onclick="iniciarReunion()">Iniciar reunión</button>
         </div>
@@ -44,24 +48,24 @@ function enviarMensaje() {
 }
 
 function volverInicio() {
+  if (window.innerWidth <= 767) {
+    document.getElementById('listaContactos').classList.remove('d-none');
+    document.getElementById('panelMensaje').classList.add('d-none');
+  }
+
   const panel = document.getElementById("panelMensaje");
+  panel.className = "col-md-8 col-lg-9 d-flex flex-column justify-content-center align-items-center bg-white";
   panel.innerHTML = `
-      <div class="bg-light rounded p-4 text-center w-75">
-        <h5 class="text-primary violeta">No hay mensajes aún</h5>
-        <p>Esperá a que un alumno te contacte. Cuando tengas una conversación, podrás iniciar una reunión con él.</p>
-      </div>
-      <div class="mt-4 d-flex gap-3 flex-wrap justify-content-center">
-        <button class="btn btn-outline-primary" onclick="window.location.href='vistaBuscarAlumnos.html'">
-          Buscar alumnos
-        </button>
-        <button class="btn btn-outline-success" onclick="window.location.href='vistaMisReuniones.html'">
-          Mis reuniones
-        </button>
-        <button class="btn btn-outline-warning" onclick="window.location.href='vistaDonacionesProfesor.html'">
-          Mis donaciones
-        </button>
-      </div>
-    `;
+    <div class="bg-light rounded p-4 text-center w-75">
+      <h5 class="text-primary violeta">No hay mensajes aún</h5>
+      <p>Esperá a que un alumno te contacte. Cuando tengas una conversación, podrás iniciar una reunión con él.</p>
+    </div>
+    <div class="mt-4 d-flex gap-3 flex-wrap justify-content-center">
+      <button class="btn btn-primary" onclick="window.location.href='vistaMiPerfilProfesor.html'">
+        Mi perfil
+      </button>
+    </div>
+  `;
 }
 
 function iniciarReunion() {
@@ -69,3 +73,9 @@ function iniciarReunion() {
   window.location.href = "vistaMisReunionesProfesor.html";
 }
 
+window.addEventListener('load', () => {
+  if (window.innerWidth <= 767) {
+    document.getElementById("panelMensaje").style.display = "none";
+    document.getElementById("listaContactos").style.display = "block";
+  }
+});
