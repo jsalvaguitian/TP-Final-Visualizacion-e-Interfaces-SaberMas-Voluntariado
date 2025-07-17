@@ -84,17 +84,7 @@ body{
     font-weight: 600 !important;
 }
 
-.js-profe-menu{
-    display: none;
-}
 
-.js-alumno-menu{
-    display: none;
-}
-
-.js-botones{
-    display: block;
-}
 .text-light{
     text-decoration: none;
 }
@@ -116,3 +106,5 @@ body{
     70% { box-shadow: 0 0 0 6px rgba(255,0,0, 0); }
     100% { box-shadow: 0 0 0 0 rgba(255,0,0, 0); }
 }
+
+
