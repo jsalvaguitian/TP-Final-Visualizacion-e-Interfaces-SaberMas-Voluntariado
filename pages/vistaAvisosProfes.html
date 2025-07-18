@@ -213,6 +213,15 @@
                 <option value="Jueves">Jueves</option>
                 <option value="Viernes">Viernes</option>
               </select>
+            </div><br>
+            <div class="mb-3">
+              <label for="filtroNivel" class="form-label">Horario</label>
+              <select class="form-select mb-3 input-custom" id="filtroNivel" onchange="filtrarClases()">
+                <option value="">Todos</option>
+                <option value="Lunes">Mañana</option>
+                <option value="Martes">Tarde</option>
+                <option value="Miércoles">Noche</option>
+              </select>
             </div>
           </div>
         </details>
@@ -237,6 +246,7 @@
               Todos
             </button>
             <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Todos</a></li>
               <li><a class="dropdown-item" href="#">Primaria</a></li>
               <li><a class="dropdown-item" href="#">Secundaria</a></li>
               <li><a class="dropdown-item" href="#">Universidad</a></li>
@@ -249,11 +259,25 @@
               Todos
             </button>
             <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Todos</a></li>
               <li><a class="dropdown-item" href="#">Lunes</a></li>
               <li><a class="dropdown-item" href="#">Martes</a></li>
               <li><a class="dropdown-item" href="#">Miércoles</a></li>
               <li><a class="dropdown-item" href="#">Jueves</a></li>
               <li><a class="dropdown-item" href="#">Viernes</a></li>
+            </ul>
+          </div><br>
+          <div class="dropdown">
+            <label for="filtroNivel" class="form-label">Horario</label>
+            <button class="btn btn-outline-secondary dropdown-toggle w-100 botonPc" type="button"
+              data-bs-toggle="dropdown">
+              Todos
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Todos</a></li>
+              <li><a class="dropdown-item" href="#">Mañana</a></li>
+              <li><a class="dropdown-item" href="#">Tarde</a></li>
+              <li><a class="dropdown-item" href="#">Noche</a></li>
             </ul>
           </div>
         </div>
