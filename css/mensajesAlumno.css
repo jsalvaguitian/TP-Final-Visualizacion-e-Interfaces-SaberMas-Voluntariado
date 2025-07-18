@@ -174,4 +174,8 @@ button:active,
     .panelMensaje {
         width: 100%;
     }
+
+    .espacio {
+        margin-top: 10px;
+    }
 }
