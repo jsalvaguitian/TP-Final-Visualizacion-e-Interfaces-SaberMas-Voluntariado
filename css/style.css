@@ -29,6 +29,7 @@
     position: relative;
     position: relative;
     text-align: center;
+    overflow:hidden;
 }
 
 .triangulo-der-sup {
