@@ -545,38 +545,39 @@
       document.getElementById("mensajeSolicitud").value = "";
     }
 
-    if (window.innerWidth <= 767) {
-      const divisor = document.getElementById('foto-nombre');
+  //   if (window.innerWidth <= 767) {
+  //     const divisor = document.getElementById('foto-nombre');
 
-      // Primero actualizamos el contenido
-      divisor.innerHTML = `
-            <div class="col-md-2 text-center" style="display: flex; align-items: center; gap: 10px;">
-              <img src="https://randomuser.me/api/portraits/men/72.jpg" class="rounded-circle" width="65" height="65" />
-              <h5 class="mb-1">Martín Gómez</h5>
-            </div>
-            <div class="col-md-7">
+  //     // Primero actualizamos el contenido
+  //     divisor.innerHTML = `
+  //           <div class="col-md-2 text-center" style="display: flex;flex-direction:column; justify-content:center; align-items: center; gap: 10px; margin-bottom: 5px;">
+  //             <img src="https://randomuser.me/api/portraits/men/72.jpg" class="rounded-circle" width="65" height="65" />
+  //             <h5 class="mb-1">Martín Gómez</h5>
+  //                           <div class="mb-1 text-muted">Estudiante de profesorado en matemática · Rosario</div>
+
+  //           </div>
+  //           <div class="col-md-7 text-center">
               
-              <div class="mb-1 text-muted">Estudiante de profesorado en matemática · Rosario</div>
-              <div class="mb-1">
-                <span class="star">⭐⭐⭐⭐⭐</span>
-                <small>(12 valoraciones)</small>
-              </div>
-              <p class="mb-1">Clases de Matemática para nivel secundario. Explicaciones claras y con buena onda.</p>
-              <div>
-                <span class="tag">Secundaria</span>
-                <span class="tag">Paciencia</span>
-              </div>
-            </div>
-            <div class="espacio col-md-3 text-center">
-              <a href="vistaAvisoPublicado.html" class="btn btn-secondary mb-2 w-100">Ver más</a>
-              <!-- Botón que abre el modal -->
-              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalSolicitud">
-                Solicitar clase
-              </button>
-            </div>
+  //             <div class="mb-1">
+  //               <span class="star">⭐⭐⭐⭐⭐</span>
+  //               <small>(12 valoraciones)</small>
+  //             </div>
+  //             <p class="mb-1">Clases de Matemática para nivel secundario. Explicaciones claras y con buena onda.</p>
+  //             <div>
+  //               <span class="tag">Secundaria</span>
+  //               <span class="tag">Paciencia</span>
+  //             </div>
+  //           </div>
+  //           <div class="espacio col-md-3 text-center">
+  //             <a href="vistaAvisoPublicado.html" class="btn btn-secondary mb-2 w-100">Ver más</a>
+  //             <!-- Botón que abre el modal -->
+  //             <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalSolicitud">
+  //               Solicitar clase
+  //             </button>
+  //           </div>
           
-  `;
-    }
+  // `;
+  //   }
   </script>
 
 </body>
