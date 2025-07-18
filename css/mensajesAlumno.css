@@ -159,6 +159,9 @@ button:active,
         color: rgb(0, 0, 0);
     }
 
+    .botonPc {
+        text-align: start;
+    }
 
 @media (max-width: 767px) {
     .navbar {

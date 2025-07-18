@@ -203,18 +203,16 @@
                 <option value="Universidad">Universidad</option>
               </select>
             </div><br>
-            <div class="dropdown">
+            <div class="mb-3">
               <label for="filtroNivel" class="form-label">Disponibilidad</label>
-              <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown">
-                Todos
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Lunes</a></li>
-                <li><a class="dropdown-item" href="#">Martes</a></li>
-                <li><a class="dropdown-item" href="#">Miércoles</a></li>
-                <li><a class="dropdown-item" href="#">Jueves</a></li>
-                <li><a class="dropdown-item" href="#">Viernes</a></li>
-              </ul>
+              <select class="form-select mb-3 input-custom" id="filtroNivel" onchange="filtrarClases()">
+                <option value="">Todos</option>
+                <option value="Lunes">Lunes</option>
+                <option value="Martes">Martes</option>
+                <option value="Miércoles">Miércoles</option>
+                <option value="Jueves">Jueves</option>
+                <option value="Viernes">Viernes</option>
+              </select>
             </div>
           </div>
         </details>
@@ -234,7 +232,7 @@
           </div>
           <div class="dropdown">
             <label for="filtroNivel" class="form-label">Nivel</label>
-            <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown">
+            <button class="btn btn-outline-secondary dropdown-toggle w-100 botonPc" type="button" data-bs-toggle="dropdown">
               Todos
             </button>
             <ul class="dropdown-menu">
@@ -245,7 +243,7 @@
           </div><br>
           <div class="dropdown">
             <label for="filtroNivel" class="form-label">Disponibilidad</label>
-            <button class="btn btn-outline-secondary dropdown-toggle w-100" type="button" data-bs-toggle="dropdown">
+            <button class="btn btn-outline-secondary dropdown-toggle w-100 botonPc" type="button" data-bs-toggle="dropdown">
               Todos
             </button>
             <ul class="dropdown-menu">
