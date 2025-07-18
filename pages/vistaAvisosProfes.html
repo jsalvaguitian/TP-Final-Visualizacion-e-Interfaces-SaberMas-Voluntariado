@@ -232,7 +232,8 @@
           </div>
           <div class="dropdown">
             <label for="filtroNivel" class="form-label">Nivel</label>
-            <button class="btn btn-outline-secondary dropdown-toggle w-100 botonPc" type="button" data-bs-toggle="dropdown">
+            <button class="btn btn-outline-secondary dropdown-toggle w-100 botonPc" type="button"
+              data-bs-toggle="dropdown">
               Todos
             </button>
             <ul class="dropdown-menu">
@@ -243,7 +244,8 @@
           </div><br>
           <div class="dropdown">
             <label for="filtroNivel" class="form-label">Disponibilidad</label>
-            <button class="btn btn-outline-secondary dropdown-toggle w-100 botonPc" type="button" data-bs-toggle="dropdown">
+            <button class="btn btn-outline-secondary dropdown-toggle w-100 botonPc" type="button"
+              data-bs-toggle="dropdown">
               Todos
             </button>
             <ul class="dropdown-menu">
@@ -264,7 +266,7 @@
         <!-- Card profesor -->
         <h2 class="mb-4">Clases gratuitas dictadas por estudiantes universitarios</h2>
         <div class="card card-profesor mb-4 p-3">
-          <div class="row g-0 align-items-center">
+          <div id="foto-nombre" class="row g-0 align-items-center">
             <div class="col-md-2 text-center">
               <img src="https://randomuser.me/api/portraits/men/72.jpg" class="rounded-circle" width="80" />
             </div>
@@ -541,6 +543,39 @@
 
       // Limpiar campo
       document.getElementById("mensajeSolicitud").value = "";
+    }
+
+    if (window.innerWidth <= 767) {
+      const divisor = document.getElementById('foto-nombre');
+
+      // Primero actualizamos el contenido
+      divisor.innerHTML = `
+            <div class="col-md-2 text-center" style="display: flex; align-items: center; gap: 10px;">
+              <img src="https://randomuser.me/api/portraits/men/72.jpg" class="rounded-circle" width="65" height="65" />
+              <h5 class="mb-1">Martín Gómez</h5>
+            </div>
+            <div class="col-md-7">
+              
+              <div class="mb-1 text-muted">Estudiante de profesorado en matemática · Rosario</div>
+              <div class="mb-1">
+                <span class="star">⭐⭐⭐⭐⭐</span>
+                <small>(12 valoraciones)</small>
+              </div>
+              <p class="mb-1">Clases de Matemática para nivel secundario. Explicaciones claras y con buena onda.</p>
+              <div>
+                <span class="tag">Secundaria</span>
+                <span class="tag">Paciencia</span>
+              </div>
+            </div>
+            <div class="espacio col-md-3 text-center">
+              <a href="vistaAvisoPublicado.html" class="btn btn-secondary mb-2 w-100">Ver más</a>
+              <!-- Botón que abre el modal -->
+              <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalSolicitud">
+                Solicitar clase
+              </button>
+            </div>
+          
+  `;
     }
   </script>
 
