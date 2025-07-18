@@ -108,19 +108,22 @@ function enviarMensaje() {
 }
 
 function volverInicio() {
+  const panel = document.getElementById("panelMensaje");
+
+  // Primero actualizamos el contenido
+  panel.innerHTML = `
+    <div class="bg-light rounded p-4 text-center w-75">
+      <h5 class="text-primary violeta">Ningún mensaje</h5>
+      <p>Revisa tu cuenta para encontrar recomendaciones y contactar a tus profesores cuando los necesites.</p>
+    </div>
+    <a href="vistaAvisosProfes.html" class="btn btn-primary mt-4">Buscar profesores</a>
+  `;
+
+  // Después ocultamos si estamos en móvil
   if (window.innerWidth <= 767) {
     document.getElementById('listaContactos').classList.remove('d-none');
-    document.getElementById('panelMensaje').classList.add('d-none');
+    //document.getElementById('panelMensaje').classList.add('d-none');
   }
-  const panel = document.getElementById("panelMensaje");
-  panel.innerHTML = `
-      <div class="bg-light rounded p-4 text-center w-75">
-                    <h5 class="text-primary violeta">Ningún mensaje</h5>
-                    <p>Revisa tu cuenta para encontrar recomendaciones y contactar a tus profesores cuando los
-                        necesites.</p>
-                </div>
-                <a href="vistaAvisosProfes.html" class="btn btn-primary mt-4">Buscar profesores</a>
-    `;
 }
 
 function marcarFavorito(btn) {
